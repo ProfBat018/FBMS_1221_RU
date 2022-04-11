@@ -88,3 +88,11 @@
 # print("Elvin")
 
 # </editor-fold>
+
+num = 26
+
+num2 = num % 10
+num3 = num // 10
+
+print(num3)
+print(num2)
