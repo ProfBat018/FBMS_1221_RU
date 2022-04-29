@@ -141,5 +141,28 @@
 
 
 
+import random
+
+nums = list()
+
+length = int(input("Enter length of list: "))
+start = int(input("Enter start of random: "))
+end = int(input("Enter end of random: "))
+
+for i in range(length):
+    nums.append(random.randint(start, end))
+
+minimum = nums[0]
+maximum = nums[0]
+
+for i in range(length - 1):
+    if maximum < nums[i + 1]:
+        maximum = nums[i + 1]
+
+    if minimum > nums[i + 1]:
+        minimum = nums[i + 1]
 
 
+print(nums)
+print(maximum)
+print(minimum)
