@@ -225,3 +225,26 @@
 
 # </editor-fold>
 
+
+"""numb1 = int(input("Введите первое число: "))
+numb2 = int(input("Введите второе число: "))
+numb3 = int(input("Введите третье число: "))
+otvet=(numb1*100+numb2*10+numb3)
+print(otvet)"""
+
+
+
+number = input('Введите число: ')
+count = 1
+for i in number:
+    count *= int(i)
+print(count)
+
+#Учитель for мы прошли поэтому так легкче было
+"""Metr = int(input("Введите количество метров"))
+print(f'{Metr} метров = {Metr*1000} миллиметров')
+print(f'{Metr} метров = {Metr*100} сантиметров')
+print(f'{Metr} метров = {Metr*10} дециметров')
+print(f'{Metr} метров = {Metr/1609} миль')"""
+
+
