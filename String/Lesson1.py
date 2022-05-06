@@ -83,3 +83,9 @@ import random
 #
 # res = random.choice(text)
 # print(res)
+import string
+
+lower_letters = string.ascii_lowercase
+upper_letters = string.ascii_uppercase
+symbols = string.punctuation
+digits = string.digits
