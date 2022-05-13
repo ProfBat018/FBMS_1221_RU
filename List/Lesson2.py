@@ -166,3 +166,4 @@ for i in range(length - 1):
 print(nums)
 print(maximum)
 print(minimum)
+

@@ -5,4 +5,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+<<<<<<< HEAD
+  <component name="PyDocumentationSettings">
+    <option name="format" value="PLAIN" />
+    <option name="myDocStringFormat" value="Plain" />
+  </component>
+=======
+>>>>>>> 144d8de9e24cb2eb4ad595c45cee7015cee42c77
 </module>
