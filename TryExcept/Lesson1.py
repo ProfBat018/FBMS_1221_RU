@@ -3,11 +3,14 @@ import traceback
 num1 = 5
 num2 = 0
 
+file = open("data.txt123", 'w')
+
 try:
-    res = num1 / num2
-    print(res)
-except ZeroDivisionError as ex:
-    print(ex)
+    file.write('1')
+except:
+    print("Somoething get wrong...")
+finally:
+    file.close()
 
 
 
