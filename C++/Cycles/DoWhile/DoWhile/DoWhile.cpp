@@ -6,6 +6,7 @@ int main()
 {
 	int selection = 0, check = 1;
 
+	system("color 03");
 	do
 	{
 		cout
