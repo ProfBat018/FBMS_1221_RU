@@ -31,6 +31,10 @@ int main()
 
 #pragma endregion
 
+	int number = 0;
+
+	cin >> number;
+
 	int arr[10]{};
 
 	for (size_t i = 0; i < 10; i++)
