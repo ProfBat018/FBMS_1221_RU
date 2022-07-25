@@ -1,0 +1,5 @@
+﻿  CharLab.cpp
+C:\Users\e.azimov\FBMS_1221_RU\C++\CharLab\CharLab\CharLab.cpp(49,29): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\e.azimov\FBMS_1221_RU\C++\CharLab\CharLab\CharLab.cpp(44): warning C4715: 'mystrchr': not all control paths return a value
+C:\Users\e.azimov\FBMS_1221_RU\C++\CharLab\CharLab\CharLab.cpp(69): warning C4715: 'mystrstr': not all control paths return a value
+  CharLab.vcxproj -> C:\Users\e.azimov\FBMS_1221_RU\C++\CharLab\x64\Debug\CharLab.exe
