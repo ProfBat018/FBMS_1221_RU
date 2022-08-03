@@ -7,11 +7,13 @@ int main()
 
 	int** arr = new int* [cols] {};
 
-	*(arr + 0) = new int[rows] {1, 3};
-	*(arr + 1) = new int[rows] {2, 5};
-	*(arr + 2) = new int[rows] {4, 6};
+	for (size_t i = 0; i < 3; i++)
+	{
+		*(arr + i) = new int[rows] {};
+	}
 
-	
+
+
 	std::cout
 		<< "Address of ptr in STACK: " << &arr << std::endl
 		<< "First element of *arr: " << *(arr + 0) << std::endl
