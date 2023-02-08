@@ -1,0 +1,14 @@
+﻿  Stack.cpp
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Stack\Stack.cpp(14,1): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Stack\Stack.cpp(12,1): message : while compiling class template member function 'Stack<int>::Stack(std::initializer_list<T>)'
+          with
+          [
+              T=int
+          ]
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Stack\Stack.cpp(77,13): message : see reference to function template instantiation 'Stack<int>::Stack(std::initializer_list<T>)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Stack\Stack.cpp(77,13): message : see reference to class template instantiation 'Stack<int>' being compiled
+  Stack.vcxproj -> C:\Work\FBMS_1221_RU\OOP\DataStructures\x64\Debug\Stack.exe

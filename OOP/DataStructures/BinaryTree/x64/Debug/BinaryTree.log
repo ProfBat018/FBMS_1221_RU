@@ -1,0 +1,4 @@
+﻿  BinaryTree.cpp
+C:\Work\FBMS_1221_RU\OOP\DataStructures\BinaryTree\BinaryTree.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Work\FBMS_1221_RU\OOP\DataStructures\BinaryTree\BinaryTree.cpp(117): warning C4715: 'BinaryTree::search': not all control paths return a value
+  BinaryTree.vcxproj -> C:\Work\FBMS_1221_RU\OOP\DataStructures\x64\Debug\BinaryTree.exe

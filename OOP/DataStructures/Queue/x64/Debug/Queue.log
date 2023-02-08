@@ -1,0 +1,14 @@
+﻿  Queue.cpp
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Queue\Queue.cpp(22,1): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Queue\Queue.cpp(20,1): message : while compiling class template member function 'Queue<int>::Queue(std::initializer_list<T>)'
+          with
+          [
+              T=int
+          ]
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Queue\Queue.cpp(112,13): message : see reference to function template instantiation 'Queue<int>::Queue(std::initializer_list<T>)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Work\FBMS_1221_RU\OOP\DataStructures\Queue\Queue.cpp(112,13): message : see reference to class template instantiation 'Queue<int>' being compiled
+  Queue.vcxproj -> C:\Work\FBMS_1221_RU\OOP\DataStructures\x64\Debug\Queue.exe
