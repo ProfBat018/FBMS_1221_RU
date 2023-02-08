@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\azimove\\Downloads\\Events\\Events\\Events.csproj",
+      "projectUniqueName": "C:\\Users\\azimove\\FBMS_1221_RU\\C#\\Events\\Events\\Events.csproj",
       "projectName": "Events",
-      "projectPath": "C:\\Users\\azimove\\Downloads\\Events\\Events\\Events.csproj",
+      "projectPath": "C:\\Users\\azimove\\FBMS_1221_RU\\C#\\Events\\Events\\Events.csproj",
       "packagesPath": "C:\\Users\\azimove\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\azimove\\Downloads\\Events\\Events\\obj\\",
+      "outputPath": "C:\\Users\\azimove\\FBMS_1221_RU\\C#\\Events\\Events\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
