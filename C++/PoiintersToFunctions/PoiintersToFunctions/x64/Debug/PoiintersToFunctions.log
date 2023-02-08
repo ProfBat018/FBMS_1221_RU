@@ -1,0 +1,3 @@
+﻿  PoiintersToFunctions.cpp
+C:\Work\FBMS_1221_RU\C++\PoiintersToFunctions\PoiintersToFunctions\PoiintersToFunctions.cpp(98,25): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  PoiintersToFunctions.vcxproj -> C:\Work\FBMS_1221_RU\C++\PoiintersToFunctions\x64\Debug\PoiintersToFunctions.exe

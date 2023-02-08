@@ -1,0 +1,3 @@
+﻿  DynamicArrays.cpp
+C:\Users\e.azimov\FBMS_1221_RU\C++\DynamicArrays\DynamicArrays\DynamicArrays.cpp(16,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  DynamicArrays.vcxproj -> C:\Users\e.azimov\FBMS_1221_RU\C++\DynamicArrays\x64\Debug\DynamicArrays.exe
