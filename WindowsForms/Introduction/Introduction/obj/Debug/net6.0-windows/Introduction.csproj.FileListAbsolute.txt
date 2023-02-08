@@ -1,0 +1,17 @@
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\bin\Debug\net6.0-windows\Introduction.exe
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\bin\Debug\net6.0-windows\Introduction.deps.json
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\bin\Debug\net6.0-windows\Introduction.runtimeconfig.json
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\bin\Debug\net6.0-windows\Introduction.dll
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\bin\Debug\net6.0-windows\Introduction.pdb
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.csproj.AssemblyReference.cache
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.Form1.resources
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.csproj.GenerateResource.cache
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.AssemblyInfoInputs.cache
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.AssemblyInfo.cs
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.csproj.CoreCompileInputs.cache
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.dll
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\refint\Introduction.dll
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.pdb
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\Introduction.genruntimeconfig.cache
+C:\Users\azimove\FBMS_1221_RU\WindowsForms\Introduction\Introduction\obj\Debug\net6.0-windows\ref\Introduction.dll
