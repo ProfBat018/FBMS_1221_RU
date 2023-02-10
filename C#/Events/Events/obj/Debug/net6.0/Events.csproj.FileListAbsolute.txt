@@ -1,0 +1,15 @@
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\bin\Debug\net6.0\Events.exe
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\bin\Debug\net6.0\Events.deps.json
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\bin\Debug\net6.0\Events.runtimeconfig.json
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\bin\Debug\net6.0\Events.dll
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\bin\Debug\net6.0\Events.pdb
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.csproj.AssemblyReference.cache
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.AssemblyInfoInputs.cache
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.AssemblyInfo.cs
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.csproj.CoreCompileInputs.cache
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.dll
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\refint\Events.dll
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.pdb
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\Events.genruntimeconfig.cache
+C:\Users\azimove\FBMS_1221_RU\C#\Events\Events\obj\Debug\net6.0\ref\Events.dll
