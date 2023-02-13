@@ -1,0 +1,17 @@
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.csproj.AssemblyReference.cache
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.View.MainView.resources
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.csproj.GenerateResource.cache
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.AssemblyInfoInputs.cache
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.AssemblyInfo.cs
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\bin\Debug\net6.0-windows\MVP.exe
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\bin\Debug\net6.0-windows\MVP.deps.json
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\bin\Debug\net6.0-windows\MVP.runtimeconfig.json
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\bin\Debug\net6.0-windows\MVP.dll
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\bin\Debug\net6.0-windows\MVP.pdb
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.dll
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\refint\MVP.dll
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.pdb
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\MVP.genruntimeconfig.cache
+C:\Work\FBMS_1221_RU\WindowsForms\MVC\MVC\obj\Debug\net6.0-windows\ref\MVP.dll
