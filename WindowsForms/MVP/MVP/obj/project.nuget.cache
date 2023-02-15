@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qi83sEWXIEqTZDEnGHfpZjC1i8iK5/sON9svzOixAhUGCO0RymWCJS5DkX7FB+LA1Z/VG72cXvRcqtRWeA+Uwg==",
+  "dgSpecHash": "/MCsnf9isgUgT4cdodrcfy2vDwkOy592RWynKMquwvxe18K0DAX3OzyIf1QLey8xZcR6p8oowqsXogFj3LbX4A==",
   "success": true,
-  "projectFilePath": "C:\\Work\\FBMS_1221_RU\\WindowsForms\\MVC\\MVC\\MVP.csproj",
+  "projectFilePath": "C:\\Work\\FBMS_1221_RU\\WindowsForms\\MVP\\MVP\\MVP.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
