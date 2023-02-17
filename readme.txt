@@ -1,4 +1,3 @@
-............................................................................................................
 C#
 Пройденные темы: 
 1. Введение
@@ -20,11 +19,13 @@ C#
 17. StackTrace
 18. System Exception vs Application exception
 19. Exception Filtering.
-
+20. Delegates
+21. Events
+22. Iterators in C#(Ienumerator, yield return)
+23. SOLID
+24. LINQ
+25. Ref and Out, params, nullable, null coalescing, null forgiving operators
 P.S. Отличия Классов и Структур очень важная тема.
-
-Главы с метанит: 
-1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 17, 22, 23, 24
 
 
 Ссылки на темы: 
