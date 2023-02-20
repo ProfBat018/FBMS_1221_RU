@@ -1,0 +1,68 @@
+﻿<Page x:Class="Lesson2.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lesson2"
+      mc:Ignorable="d" 
+      DataContext="{Binding RelativeSource={RelativeSource Self}}"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginPage">
+
+    <Page.Resources>
+        <Style x:Key="InfoLabel" TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+
+
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0" Grid.Column="0"
+            Style="{StaticResource InfoLabel}"
+            Content="Username:"/>
+        <Label
+            Style="{StaticResource InfoLabel}"
+            Grid.Row="1" Grid.Column="0"
+            Content="Password:"/>
+
+
+        <TextBox Text="{Binding User.Name}" Grid.Row="0" Grid.Column="1"/>
+        <TextBox Text="{Binding User.Surname}" Grid.Row="1" Grid.Column="1"/>
+
+        <Button Click="Login_Click"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="Login"
+                FontSize="32"/>
+        <Button Click="Register_Click"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Register"
+                FontSize="32"/>
+
+
+    </Grid>
+</Page>
+
+    
+    
