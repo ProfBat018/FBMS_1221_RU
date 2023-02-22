@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33020.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp3", "WpfApp3\WpfApp3.csproj", "{0BC204A4-38DF-4F3C-AC20-9F21AB9AD573}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaClient", "CinemaClient\CinemaClient.csproj", "{52BA620D-D6DF-45BB-9EDC-59AC592EE2A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0BC204A4-38DF-4F3C-AC20-9F21AB9AD573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BC204A4-38DF-4F3C-AC20-9F21AB9AD573}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BC204A4-38DF-4F3C-AC20-9F21AB9AD573}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BC204A4-38DF-4F3C-AC20-9F21AB9AD573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BA620D-D6DF-45BB-9EDC-59AC592EE2A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BA620D-D6DF-45BB-9EDC-59AC592EE2A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BA620D-D6DF-45BB-9EDC-59AC592EE2A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BA620D-D6DF-45BB-9EDC-59AC592EE2A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3400A560-3525-44BD-ADA6-4D779685999C}
+		SolutionGuid = {023CB5EC-2D10-48AA-9A45-360E95B1DD1C}
 	EndGlobalSection
 EndGlobal
