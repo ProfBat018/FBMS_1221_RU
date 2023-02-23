@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "VUXVKa50AT+BpUbF28R9louNlqrSDnBFCXyzGRDx524TERCI/IUTjfPUvlBa8ZZpsPmB95FBs58TDbcE8Es8SQ==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\FBMS_1221_RU\\Cinema\\CinemaClient\\CinemaClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elvin\\.nuget\\packages\\materialdesigncolors\\2.1.1\\materialdesigncolors.2.1.1.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\materialdesignthemes\\4.7.1\\materialdesignthemes.4.7.1.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
