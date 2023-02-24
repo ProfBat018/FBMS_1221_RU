@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CinemaClient.View"
+        xmlns:ViewModel="clr-namespace:CinemaClient.ViewModel"
         mc:Ignorable="d"
         xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -15,7 +16,14 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Login" Height="500" Width="800" MinHeight="450" MinWidth="400">
 
+    <!-- 
+    MainView - главное окно, которое делает Binding контента.  
+    -->
     <Grid>
+        <!--
+            ContentControl - элемент, который отвечает за привязку 
+            изменяемого контента к окну.  
+         -->
         <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

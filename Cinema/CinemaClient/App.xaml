@@ -13,13 +13,16 @@
                 <View:MainView></View:MainView>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type ViewModel:LoginViewModel}">
-                <View:LoginView></View:LoginView>
+            <DataTemplate DataType="{x:Type ViewModel:AuthViewModel}">
+                <View:AuthView></View:AuthView>
             </DataTemplate>
-
 
             <DataTemplate DataType="{x:Type ViewModel:RegisterViewModel}">
                 <View:RegisterView></View:RegisterView>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type ViewModel:HomeViewModel}">
+                <View:HomeView></View:HomeView>
             </DataTemplate>
 
 

@@ -19,12 +19,11 @@ namespace CinemaClient.View
     /// <summary>
     /// Interaction logic for LoginView.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public partial class AuthView : UserControl
     {
-        public LoginView()
+        public AuthView()
         {
             InitializeComponent();
-            DataContext = new LoginViewModel();
         }
     }
 }

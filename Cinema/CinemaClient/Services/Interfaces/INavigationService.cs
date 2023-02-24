@@ -2,15 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CinemaClient.ViewModel
+namespace CinemaClient.Services.Interfaces
 {
-    internal class RegisterViewModel : ViewModelBase
+    internal interface INavigationService
     {
-        
+        public void NavigateTo<T>() where T : ViewModelBase;
     }
 }

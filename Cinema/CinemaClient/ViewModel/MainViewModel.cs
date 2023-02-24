@@ -3,23 +3,40 @@ using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using CinemaClient.Messages;
 
 namespace CinemaClient.ViewModel
 {
-
     class MainViewModel : ViewModelBase
     {
-        public ViewModelBase CurrentViewModel { get; set; } = new LoginViewModel();
-
-        public MainViewModel()
+        private ViewModelBase _currentViewModel;
+        public ViewModelBase CurrentViewModel
         {
+            get => _currentViewModel;
+            set
+            {
+                Set(ref _currentViewModel, value);
+            }
+        }
 
+        private readonly IMessenger _messenger;
+
+        public MainViewModel(IMessenger messenger)
+        {
+            CurrentViewModel = App.Container.GetInstance<AuthViewModel>();
+            
+            _messenger = messenger;
+            _messenger.Register<NavigationMessage>(this, message =>
+            {
+                CurrentViewModel = App.Container.GetInstance(message.ViewModelType) as ViewModelBase;
+            });
         }
     }
 

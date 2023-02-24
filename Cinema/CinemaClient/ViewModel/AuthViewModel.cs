@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using CinemaClient.Messages;
+using CinemaClient.Services.Interfaces;
 
 namespace CinemaClient.ViewModel
 {
-    internal class LoginViewModel : ViewModelBase
+    internal class AuthViewModel : ViewModelBase
     {
-        public IMessenger Messenger { get; set; } = new Messenger();
-
+        private readonly INavigationService _navigationService;
+        public AuthViewModel(INavigationService navigationService)
+        {
+            _navigationService = navigationService;
+        }
         public RelayCommand LoginCommand
         {
             get => new(() =>
@@ -26,7 +31,7 @@ namespace CinemaClient.ViewModel
         {
             get => new(() =>
             {
-                Messenger.Send(typeof(RegisterViewModel));
+                _navigationService.NavigateTo<RegisterViewModel>();
             });
         }
     }
