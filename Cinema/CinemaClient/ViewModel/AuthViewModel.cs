@@ -1,38 +1,37 @@
-﻿using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
+﻿using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using CinemaClient.Messages;
 using CinemaClient.Services.Interfaces;
+using System.Windows;
+using System.Windows.Navigation;
 
-namespace CinemaClient.ViewModel
+namespace CinemaClient.ViewModel;
+
+public class AuthViewModel : ViewModelBase
 {
-    internal class AuthViewModel : ViewModelBase
-    {
-        private readonly INavigationService _navigationService;
-        public AuthViewModel(INavigationService navigationService)
-        {
-            _navigationService = navigationService;
-        }
-        public RelayCommand LoginCommand
-        {
-            get => new(() =>
-            {
-                MessageBox.Show("Login");
-            });
-        }
+    private readonly INavigationService _navigationService;
 
-        public RelayCommand RegisterCommand
+    public AuthViewModel(INavigationService navigationService)
+    {
+        _navigationService = navigationService;
+    }
+    public RelayCommand LoginCommand
+    {
+        get => new(() =>
         {
-            get => new(() =>
-            {
-                _navigationService.NavigateTo<RegisterViewModel>();
-            });
-        }
+            MessageBox.Show("Login");
+        });
+    }
+
+    public RelayCommand RegisterCommand
+    {
+        get => new(() =>
+        {
+            _navigationService.NavigateTo<RegisterViewModel>();
+        });
     }
 }

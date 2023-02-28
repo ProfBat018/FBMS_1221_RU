@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CinemaClient.Services.Interfaces
 {
-    internal interface INavigationService
+    public interface INavigationService
     {
         public void NavigateTo<T>() where T : ViewModelBase;
     }

@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:CinemaClient.View"
         xmlns:ViewModel="clr-namespace:CinemaClient.ViewModel"
         mc:Ignorable="d"
-        xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        d:DataContext="{d:DesignInstance Type=ViewModel:MainViewModel}"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="24"
@@ -14,16 +15,36 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="Login" Height="500" Width="800" MinHeight="450" MinWidth="400">
+        Title="Login" Height="500" Width="800" MinHeight="450" MinWidth="400" WindowStyle="None">
 
     <!-- 
     MainView - главное окно, которое делает Binding контента.  
     -->
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <!--
             ContentControl - элемент, который отвечает за привязку 
             изменяемого контента к окну.  
          -->
-        <ContentControl Content="{Binding CurrentViewModel}"/>
+        
+        <StackPanel 
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
+
+            <Button Click="Minimize_Click" Style="{DynamicResource MaterialDesignFlatDarkButton}">
+                <mD:PackIcon Kind="Minimize"/>
+            </Button>
+            <Button Click="Maximize_Click" Style="{DynamicResource MaterialDesignFlatDarkButton}">
+                <mD:PackIcon Kind="Maximize"/>
+            </Button>
+            <Button Click="Exit_Click" Style="{DynamicResource MaterialDesignFlatDarkButton}">
+                <mD:PackIcon Kind="Close"/>
+            </Button>
+        </StackPanel>
+        
+        <ContentControl Grid.Row="1" Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

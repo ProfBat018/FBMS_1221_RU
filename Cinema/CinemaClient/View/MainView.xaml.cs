@@ -24,5 +24,30 @@ namespace CinemaClient.View
         {
             InitializeComponent();
         }
+
+        private void Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        static bool check = false;
+        private void Maximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (check)
+            {
+                this.WindowState = WindowState.Normal;
+                check = false;
+            }
+            else
+            {
+                this.WindowState=WindowState.Maximized;
+                check = true;
+            }
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
     }
 }

@@ -11,69 +11,70 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using CinemaClient.Messages;
+using System.Net.Sockets;
 
-namespace CinemaClient.ViewModel
+namespace CinemaClient.ViewModel;
+class MainViewModel : ViewModelBase
 {
-    class MainViewModel : ViewModelBase
+    private ViewModelBase _currentViewModel;
+    public ViewModelBase CurrentViewModel
     {
-        private ViewModelBase _currentViewModel;
-        public ViewModelBase CurrentViewModel
+        get => _currentViewModel;
+        set
         {
-            get => _currentViewModel;
-            set
-            {
-                Set(ref _currentViewModel, value);
-            }
-        }
-
-        private readonly IMessenger _messenger;
-
-        public MainViewModel(IMessenger messenger)
-        {
-            CurrentViewModel = App.Container.GetInstance<AuthViewModel>();
-            
-            _messenger = messenger;
-            _messenger.Register<NavigationMessage>(this, message =>
-            {
-                CurrentViewModel = App.Container.GetInstance(message.ViewModelType) as ViewModelBase;
-            });
+            Set(ref _currentViewModel, value);
         }
     }
 
-    #region MyRelayCommand
+    private readonly IMessenger _messenger;
 
-    /* class MyRelayCommand : ICommand
+    public void ReceiveMessage(NavigationMessage message)
+    {
+        CurrentViewModel = App.Container.GetInstance(message.ViewModelType) as ViewModelBase;
+    }
+
+    public MainViewModel(IMessenger messenger)
+    {
+        CurrentViewModel = App.Container.GetInstance<AuthViewModel>();
+
+        _messenger = messenger;
+
+        _messenger.Register<NavigationMessage>(this, ReceiveMessage);
+    }
+}
+
+#region MyRelayCommand
+
+/* class MyRelayCommand : ICommand
+ {
+     public event EventHandler? CanExecuteChanged;
+
+     private readonly Action _action;
+     public MyRelayCommand(Action action)
      {
-         public event EventHandler? CanExecuteChanged;
-
-         private readonly Action _action;
-         public MyRelayCommand(Action action)
-         {
-             _action = action;
-         }
-
-         public bool CanExecute(object? parameter)
-         {
-             return true;
-         }
-
-         public void Execute(object? parameter)
-         {
-             _action();
-         }
+         _action = action;
      }
 
-
-     class MainViewModel
+     public bool CanExecute(object? parameter)
      {
-         public MyRelayCommand LoginCommand
-         {
-             get => new(() =>
-             {
-                 MessageBox.Show("My relay command");
-             });
-         }
-     }*/
-    #endregion
+         return true;
+     }
 
-}
+     public void Execute(object? parameter)
+     {
+         _action();
+     }
+ }
+
+
+ class MainViewModel
+ {
+     public MyRelayCommand LoginCommand
+     {
+         get => new(() =>
+         {
+             MessageBox.Show("My relay command");
+         });
+     }
+ }*/
+#endregion

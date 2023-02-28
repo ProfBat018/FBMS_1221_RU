@@ -29,9 +29,11 @@ namespace CinemaClient
 
         private void Register()
         {
+            // Создаются объекты моих классов и записываются в интерфейсные ссылки
             Container.RegisterSingleton<IMessenger, Messenger>();
-            Container.RegisterSingleton<INavigationService, NavigationService>();
-            Container.RegisterSingleton<MainViewModel>();
+            Container.RegisterSingleton<INavigationService, NavigationService>(); // INavigationService ref1 = new NavigationService();
+
+            Container.RegisterSingleton<MainViewModel>(); // Создаются объекты моих классов
             Container.RegisterSingleton<HomeViewModel>();
             Container.RegisterSingleton<AuthViewModel>();
             Container.RegisterSingleton<RegisterViewModel>();

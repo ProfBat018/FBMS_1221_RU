@@ -24,7 +24,6 @@ namespace CinemaClient.View
         public RegisterView()
         {
             InitializeComponent();
-            DataContext = new RegisterViewModel();
         }
     }
 }
