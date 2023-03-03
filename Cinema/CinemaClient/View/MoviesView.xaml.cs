@@ -1,5 +1,4 @@
-﻿using CinemaClient.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,12 +16,11 @@ using System.Windows.Shapes;
 namespace CinemaClient.View
 {
     /// <summary>
-    /// Interaction logic for RegisterView.xaml
+    /// Interaction logic for MoviesView.xaml
     /// </summary>
-    /// 
-    public partial class RegisterView : UserControl
+    public partial class MoviesView : UserControl
     {
-        public RegisterView()
+        public MoviesView()
         {
             InitializeComponent();
         }

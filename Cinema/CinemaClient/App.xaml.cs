@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -32,6 +33,10 @@ namespace CinemaClient
             // Создаются объекты моих классов и записываются в интерфейсные ссылки
             Container.RegisterSingleton<IMessenger, Messenger>();
             Container.RegisterSingleton<INavigationService, NavigationService>(); // INavigationService ref1 = new NavigationService();
+            
+            Container.RegisterSingleton<ISerializeService, SerializeService>();
+            Container.RegisterSingleton<IUserManageService, UserManageService>();
+
 
             Container.RegisterSingleton<MainViewModel>(); // Создаются объекты моих классов
             Container.RegisterSingleton<HomeViewModel>();

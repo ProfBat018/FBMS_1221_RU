@@ -8,22 +8,39 @@ using System.Threading.Tasks;
 using CinemaClient.Services.Interfaces;
 using System.Windows;
 using System.Windows.Navigation;
+using System.Windows.Controls;
 
 namespace CinemaClient.ViewModel;
 
 public class AuthViewModel : ViewModelBase
 {
     private readonly INavigationService _navigationService;
+    private readonly IUserManageService _userManageService;
+    public string Username { get; set; }
 
-    public AuthViewModel(INavigationService navigationService)
+    public AuthViewModel(INavigationService navigationService, IUserManageService userManageService)
     {
         _navigationService = navigationService;
+        _userManageService = userManageService;
     }
-    public RelayCommand LoginCommand
+
+    public RelayCommand<object> LoginCommand
     {
-        get => new(() =>
+        get => new(
+            param =>
         {
-            MessageBox.Show("Login");
+            try
+            {
+                var password = param as PasswordBox;
+
+                var user = _userManageService.GetUser(Username, password.Password);
+
+                MessageBox.Show($"{user.Email} logged in");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("User doesn't exist");
+            }
         });
     }
 

@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CinemaClient.View"
              mc:Ignorable="d" 
+             xmlns:cr="clr-namespace:CinemaClient.Converters"
              xmlns:ViewModel="clr-namespace:CinemaClient.ViewModel" 
              xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes" 
              d:DataContext="{d:DesignInstance Type=ViewModel:RegisterViewModel}"
@@ -17,7 +18,11 @@
              FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="450" d:DesignWidth="800">
 
-  
+
+    <UserControl.Resources>
+        <cr:PasswordConverter x:Key="MyConv"></cr:PasswordConverter>
+    </UserControl.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
@@ -39,22 +44,26 @@
                      Margin="0 20 0 0"  
                      FontSize="16"
                      mD:HintAssist.Hint="Enter your username"
-                     Text="{Binding UserInfo.Username}"/>
+                     Text="{Binding User.Username}"/>
 
             <TextBox Style="{DynamicResource MaterialDesignOutlinedTextBox}"
                      Height="50"
                      Margin="0 20 0 0" 
                      FontSize="16"
                      mD:HintAssist.Hint="Enter your mail address"
-                     Text="{Binding UserInfo.Email}"/>
+                     Text="{Binding User.Email}"/>
 
-            <PasswordBox Style="{DynamicResource MaterialDesignOutlinedPasswordBox}" 
+            <PasswordBox 
+                         x:Name="Password"
+                         Style="{DynamicResource MaterialDesignOutlinedPasswordBox}" 
                          Height="50"
                          Margin="0 20 0 0" 
                          FontSize="16"
                          mD:HintAssist.Hint="Enter your password"/>
 
-            <PasswordBox Style="{DynamicResource MaterialDesignOutlinedPasswordBox}"
+            <PasswordBox
+                         x:Name="Confirm"
+                         Style="{DynamicResource MaterialDesignOutlinedPasswordBox}"
                          Height="50" 
                          Margin="0 20 0 0" 
                          FontSize="16"
@@ -66,11 +75,11 @@
         <StackPanel Grid.Row="1" Grid.Column="1">
             <DockPanel>
                 <ComboBox 
-                          ItemsSource="{Binding UserInfo.Operators}"
+                          ItemsSource="{Binding Operators}"
                           DockPanel.Dock="Left"
                           Style="{DynamicResource MaterialDesignOutlinedComboBox}" 
                           Height="50"
-                          SelectedIndex="{Binding UserInfo.SelectedOperator}"
+                          SelectedIndex="{Binding User.SelectedOperator}"
                           FontSize="16"
                           Margin="0 20 0 0"/>
                 
@@ -80,12 +89,12 @@
                           Margin="0 20 20 0"  
                           FontSize="16"
                           mD:HintAssist.Hint="Enter your phone"
-                          Text="{Binding UserInfo.PhoneNumber}"/>
+                          Text="{Binding User.PhoneNumber}"/>
             </DockPanel>
 
             <DatePicker Style="{DynamicResource MaterialDesignOutlinedDatePicker}"
                         Margin="0 20 20 0"
-                        SelectedDate="{Binding UserInfo.BirthDate}"
+                        SelectedDate="{Binding User.BirthDate}"
                         Height="50" FirstDayOfWeek="Monday" DisplayDate="11/16/2001" FontSize="16"/>
 
         </StackPanel>
@@ -102,6 +111,7 @@
                 </StackPanel>
             </Button>
 
+            
             <Button
                 Command="{Binding RegisterCommand}"
                 Height="40" Width="175"  Style="{DynamicResource MaterialDesignRaisedButton}">
@@ -109,6 +119,13 @@
                     <Label Foreground="Azure" Content="Register"/>
                     <mD:PackIcon Width="30px" Height="25px" Kind="Register"/>
                 </StackPanel>
+               
+                <Button.CommandParameter>
+                    <MultiBinding Converter="{StaticResource MyConv}">
+                        <Binding ElementName="Password"/>
+                        <Binding ElementName="Confirm"/>
+                    </MultiBinding>
+                </Button.CommandParameter>
             </Button>
         </DockPanel>
     </Grid>

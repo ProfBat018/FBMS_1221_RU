@@ -15,4 +15,10 @@
     <PackageReference Include="SimpleInjector" Version="5.4.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

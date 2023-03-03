@@ -30,17 +30,24 @@
 
         <StackPanel Width="350" Grid.Row="1" Grid.ColumnSpan="2">
 
-            <TextBox Style="{DynamicResource MaterialDesignOutlinedTextBox}" Margin="0 20 0 0"  
-            mD:HintAssist.Hint="Enter your username"/>
+            <TextBox 
+                Text="{Binding Username}"
+                Style="{DynamicResource MaterialDesignOutlinedTextBox}" 
+                Margin="0 20 0 0"  
+                mD:HintAssist.Hint="Enter your username"/>
 
-            <PasswordBox Style="{DynamicResource MaterialDesignOutlinedPasswordBox}" Margin="0 20 0 0" 
-            mD:HintAssist.Hint="Enter your password"/>
+            <PasswordBox 
+                x:Name="Password"
+                Style="{DynamicResource MaterialDesignOutlinedPasswordBox}" 
+                Margin="0 20 0 0" 
+                mD:HintAssist.Hint="Enter your password"/>
         </StackPanel>
 
         <DockPanel Width="350" Grid.ColumnSpan="2" Grid.Row="2">
 
             <Button
                 Command="{Binding LoginCommand}"
+                CommandParameter="{Binding ElementName=Password}"
                 Height="40" Width="175"
                 Style="{DynamicResource MaterialDesignRaisedButton}">
                 <StackPanel Orientation="Horizontal">
