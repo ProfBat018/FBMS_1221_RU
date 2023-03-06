@@ -16,7 +16,6 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="Login" Height="500" Width="800" MinHeight="450" MinWidth="400" WindowStyle="None">
-
     <!-- 
     MainView - главное окно, которое делает Binding контента.  
     -->

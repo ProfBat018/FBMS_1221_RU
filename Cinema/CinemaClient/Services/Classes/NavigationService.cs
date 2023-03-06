@@ -19,6 +19,8 @@ namespace CinemaClient.Services.Classes
         {
             _messenger = messenger;
         }
+
+        // _navigationService.NavigateTo<AuthViewModel>();
         public void NavigateTo<T>() where T : ViewModelBase
         {
             _messenger.Send(new NavigationMessage()

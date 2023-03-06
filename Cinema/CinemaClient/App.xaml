@@ -8,7 +8,6 @@
 
     <Application.Resources>
         <ResourceDictionary>
-
             <DataTemplate DataType="{x:Type ViewModel:MainViewModel}">
                 <View:MainView></View:MainView>
             </DataTemplate>

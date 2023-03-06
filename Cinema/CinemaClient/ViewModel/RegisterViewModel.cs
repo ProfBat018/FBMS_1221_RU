@@ -36,7 +36,6 @@ internal class RegisterViewModel : ViewModelBase
         _userService = userService;
     }
 
-
     public RelayCommand LoginCommand
     {
         get => new(
