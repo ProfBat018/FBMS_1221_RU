@@ -5,8 +5,56 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:CinemaClient.View"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:ViewModel="clr-namespace:CinemaClient.ViewModel"
+             xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             d:DataContext="{d:DesignInstance Type=ViewModel:HomeViewModel}"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="24"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
         
+            <TextBox
+                Grid.Column="0"
+                Text="{Binding Searchbar}"
+                Style="{DynamicResource MaterialDesignFloatingHintTextBox}" 
+                mD:HintAssist.Hint="Enter movie name"/>
+            <Button 
+                Grid.Column="1"
+                Command="{Binding SearchCommand}"
+                Style="{DynamicResource MaterialDesignToolButton}"
+                Width="100px">
+                <mD:PackIcon Height="25" Width="25" Kind="Search"/>
+            </Button>
+
+        <ListBox ItemsSource="{Binding SearchResult}" Grid.Row="1" Grid.ColumnSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <Label Content="{Binding Title}"/>
+                            <Label Content="{Binding Type}"/>
+                            <Label Content="{Binding Year}"/>
+                        </StackPanel>
+                        <Image Width="256" Height="256" Source="{Binding Poster}"/>
+                        <Button Style="{DynamicResource MaterialDesignRaisedSecondaryButton}">
+                            <mD:PackIcon Kind="Search"/>
+                        </Button>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </UserControl>

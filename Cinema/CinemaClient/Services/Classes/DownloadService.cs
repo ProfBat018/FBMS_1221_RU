@@ -10,12 +10,18 @@ namespace CinemaClient.Services.Classes
 {
     public class DownloadService : IDownloadService
     {
-        // https://www.omdbapi.com/?s=batman&apikey=fdacdf88
         public string DownloadJson(string search)
         {
             WebClient client = new();
-
-            return String.Empty;
+            try
+            {
+                var res = client.DownloadString($"https://www.omdbapi.com/?s={search}&apikey=fdacdf88");
+                return res;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

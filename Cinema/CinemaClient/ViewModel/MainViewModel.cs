@@ -41,7 +41,7 @@ class MainViewModel : ViewModelBase
 
     public MainViewModel(IMessenger messenger) // constructor
     {
-        CurrentViewModel = App.Container.GetInstance<AuthViewModel>(); // Ставлю окно по умолчанию 
+        CurrentViewModel = App.Container.GetInstance<HomeViewModel>(); // Ставлю окно по умолчанию 
         
         _messenger = messenger; 
 

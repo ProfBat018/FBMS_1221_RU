@@ -36,6 +36,7 @@ namespace CinemaClient
             Container.RegisterSingleton<IMessenger, Messenger>(); 
 
             Container.RegisterSingleton<INavigationService, NavigationService>(); // INavigationService ref1 = new NavigationService();
+            Container.RegisterSingleton<IDownloadService, DownloadService>();
             Container.RegisterSingleton<ISerializeService, SerializeService>();
             Container.RegisterSingleton<IUserManageService, UserManageService>();
 
