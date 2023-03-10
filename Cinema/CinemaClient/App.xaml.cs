@@ -40,11 +40,11 @@ namespace CinemaClient
             Container.RegisterSingleton<ISerializeService, SerializeService>();
             Container.RegisterSingleton<IUserManageService, UserManageService>();
 
-
             Container.RegisterSingleton<MainViewModel>(); // Создаются объекты моих классов
             Container.RegisterSingleton<HomeViewModel>();
             Container.RegisterSingleton<AuthViewModel>();
             Container.RegisterSingleton<RegisterViewModel>();
+            Container.RegisterSingleton<InfoViewModel>();
         }
 
         private void MainStartup()

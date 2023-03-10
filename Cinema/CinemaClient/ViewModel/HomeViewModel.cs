@@ -18,11 +18,13 @@ public class HomeViewModel : ViewModelBase
 
     private readonly ISerializeService _serializeService;
     private readonly IDownloadService _downloadService;
+    private readonly INavigationService _navigationService;
 
-    public HomeViewModel(ISerializeService serializeService, IDownloadService downloadService)
+    public HomeViewModel(ISerializeService serializeService, IDownloadService downloadService, INavigationService navigationService)
     {
         _serializeService = serializeService;
         _downloadService = downloadService;
+        _navigationService = navigationService;
     }
 
     public RelayCommand SearchCommand
@@ -34,7 +36,7 @@ public class HomeViewModel : ViewModelBase
             {
                 try
                 {
-                    var json = _downloadService.DownloadJson(Searchbar);
+                    var json = _downloadService.DownloadJson(UriModel.SearchByMovie(Searchbar));
                     var searchResult = _serializeService.Deserialize<Movie>(json);
 
                     foreach (var item in searchResult.Search)
@@ -46,6 +48,26 @@ public class HomeViewModel : ViewModelBase
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        });
+    }
+
+    public RelayCommand<object> InfoCommand
+    {
+        get => new(param => 
+        {
+            try
+            {
+                if (param != null)
+                {
+                    var json = _downloadService.DownloadJson(UriModel.SearchById(param as string));
+                    var data = _serializeService.Deserialize<MovieInfoModel>(json);
+                    _navigationService.NavigateTo<InfoViewModel>(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         });
     }

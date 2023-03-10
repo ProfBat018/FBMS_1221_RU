@@ -24,6 +24,9 @@
                 <View:HomeView></View:HomeView>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type ViewModel:InfoViewModel}">
+                <View:InfoView></View:InfoView>
+            </DataTemplate>
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />

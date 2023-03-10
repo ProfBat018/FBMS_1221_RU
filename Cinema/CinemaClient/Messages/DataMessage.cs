@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CinemaClient.Services.Interfaces
+namespace CinemaClient.Messages
 {
-    public interface IDownloadService
+    class DataMessage
     {
-        public string DownloadJson(string url);
+        public object Data { get; set; }
     }
 }

@@ -21,12 +21,20 @@ namespace CinemaClient.Services.Classes
         }
 
         // _navigationService.NavigateTo<AuthViewModel>();
-        public void NavigateTo<T>() where T : ViewModelBase
+        public void NavigateTo<T>(object? data = null) where T : ViewModelBase
         {
             _messenger.Send(new NavigationMessage()
             {
                 ViewModelType = typeof(T)
             });
+
+            if (data != null)
+            {
+                _messenger.Send(new DataMessage()
+                {
+                    Data = data
+                });
+            }
         }
     }
 }
