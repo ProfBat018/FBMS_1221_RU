@@ -49,5 +49,10 @@ namespace CinemaClient.View
         {
             App.Current.Shutdown();
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

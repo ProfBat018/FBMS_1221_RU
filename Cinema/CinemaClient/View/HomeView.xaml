@@ -1,65 +1,4 @@
-﻿<!--<UserControl x:Class="CinemaClient.View.HomeView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:CinemaClient.View"
-             mc:Ignorable="d"
-             xmlns:ViewModel="clr-namespace:CinemaClient.ViewModel"
-             xmlns:mD="http://materialdesigninxaml.net/winfx/xaml/themes" 
-             d:DataContext="{d:DesignInstance Type=ViewModel:HomeViewModel}"
-             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-             TextElement.FontWeight="Regular"
-             TextElement.FontSize="24"
-             TextOptions.TextFormattingMode="Ideal"
-             TextOptions.TextRenderingMode="Auto"
-             Background="{DynamicResource MaterialDesignPaper}"
-             FontFamily="{DynamicResource MaterialDesignFont}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.15*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0.1*"/>
-        </Grid.ColumnDefinitions>
-        
-            <TextBox
-                Grid.Column="0"
-                Text="{Binding Searchbar}"
-                Style="{DynamicResource MaterialDesignFloatingHintTextBox}" 
-                mD:HintAssist.Hint="Enter movie name"/>
-            <Button 
-                Grid.Column="1"
-                Command="{Binding SearchCommand}"
-                Style="{DynamicResource MaterialDesignToolButton}"
-                Width="100px">
-                <mD:PackIcon Height="25" Width="25" Kind="Search"/>
-            </Button>
-
-        <ListBox ItemsSource="{Binding SearchResult}" Grid.Row="1" Grid.ColumnSpan="2">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <WrapPanel>
-                        <StackPanel>
-                            <Label Content="{Binding Title}"/>
-                            <Label Content="{Binding Type}"/>
-                            <Label Content="{Binding Year}"/>
-                        <Image Width="256" Height="256" Source="{Binding Poster}"/>
-                        <Button Style="{DynamicResource MaterialDesignRaisedSecondaryButton}">
-                            <mD:PackIcon Kind="Search"/>
-                        </Button>
-                        </StackPanel>
-                    </WrapPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-    </Grid>
-</UserControl>-->
-
-<UserControl x:Class="CinemaClient.View.HomeView"
+﻿<UserControl x:Class="CinemaClient.View.HomeView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -78,6 +17,7 @@
              FontFamily="{DynamicResource MaterialDesignFont}"
              d:DesignHeight="500" d:DesignWidth="800"
              Name="HomeControl">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.15*"/>
@@ -102,61 +42,65 @@
             <mD:PackIcon Height="25" Width="25" Kind="Search"/>
         </Button>
 
+
+
         <ScrollViewer Grid.ColumnSpan="2" Grid.Row="1" Background="{DynamicResource MaterialDesignCardBackground}">
             <StackPanel>
-                <StackPanel Margin="10 0">
-                    <ItemsControl ItemsSource="{Binding SearchResult}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <mD:Flipper>
-                                    <mD:Flipper.FrontContent>
-                                        <Border Margin="5" Width="100" Height="200">
-                                            <StackPanel>
-                                                <Border Width="100" Height="100" CornerRadius="5" Margin="5">
-                                                    <Border.Effect>
-                                                        <DropShadowEffect ShadowDepth="1"/>
-                                                    </Border.Effect>
-                                                    <Border.Background>
-                                                        <ImageBrush Stretch="Uniform" ImageSource="{Binding Poster}"/>
-                                                    </Border.Background>
-                                                </Border>
-                                                <TextBlock Margin="5" Text="{Binding Title}" FontSize="15" FontFamily="Franklin Gothic Medium"/>
-                                                <TextBlock Margin="5 0" Text="{Binding Year}" FontSize="10"/>
-                                                <Button 
-                                                    Style="{StaticResource MaterialDesignFlatButton}"
-                                                    Command="{x:Static mD:Flipper.FlipCommand}"
-                                                    Margin="0 4 0 0"
-                                                    Content="Info"/>
-                                            </StackPanel>
-                                        </Border>
-                                    </mD:Flipper.FrontContent>
-                                    <mD:Flipper.BackContent>
-                                        <DockPanel Margin="5" Width="100" Height="200">
-                                            <Button
+                <ItemsControl ItemsSource="{Binding SearchResult}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <mD:Flipper Margin="5 0">
+                                <mD:Flipper.FrontContent>
+                                    <Border Width="150" Height="250">
+                                        <StackPanel>
+                                            <Border HorizontalAlignment="Center" Width="150" Height="120" CornerRadius="10">
+                                                <Border.Effect>
+                                                    <DropShadowEffect ShadowDepth="2"/>
+                                                </Border.Effect>
+
+                                                <Image HorizontalAlignment="Center" Stretch="Uniform" Source="{Binding Poster}" Cursor="Hand">
+                                                    <Image.InputBindings>
+                                                        <MouseBinding Gesture="LeftClick" Command="{x:Static mD:Flipper.FlipCommand}" />
+                                                    </Image.InputBindings>
+                                                </Image>
+                                            </Border>
+                                            <TextBlock 
+                                                HorizontalAlignment="Center" 
+                                                Text="{Binding Title}"
+                                                Margin="0 5"
+                                                FontSize="12"
+                                                TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Border>
+                                </mD:Flipper.FrontContent>
+                                <mD:Flipper.BackContent>
+                                    <DockPanel>
+                                        <Button
+                                                Width="150" Height="100"
                                                 Command="{Binding Path=DataContext.InfoCommand, ElementName=HomeControl}"
                                                 CommandParameter="{Binding imdbID}"
                                                 Style="{StaticResource MaterialDesignFlatButton}"
-                                                Height="120" DockPanel.Dock="Top">
-                                                <mD:PackIcon Kind="InformationCircle">
-                                                </mD:PackIcon>
-                                            </Button>
-                                            <Button 
-                                                    Style="{StaticResource MaterialDesignFlatButton}"
-                                                    Command="{x:Static mD:Flipper.FlipCommand}"
-                                                    Margin="0 4 0 0"
-                                                    Content="Back"/>
-                                        </DockPanel>
-                                    </mD:Flipper.BackContent>
-                                </mD:Flipper>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                    </ItemsControl>
-                </StackPanel>
+                                                DockPanel.Dock="Top">
+                                            <mD:PackIcon Kind="InformationCircle">
+                                            </mD:PackIcon>
+                                        </Button>
+                                        <Button 
+                                            Height="40"
+                                            Style="{StaticResource MaterialDesignFlatButton}"
+                                            Command="{x:Static mD:Flipper.FlipCommand}"
+                                            Margin="5"
+                                            Content="Back"/>
+                                    </DockPanel>
+                                </mD:Flipper.BackContent>
+                            </mD:Flipper>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
             </StackPanel>
         </ScrollViewer>
     </Grid>

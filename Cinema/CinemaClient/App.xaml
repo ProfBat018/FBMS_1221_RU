@@ -28,6 +28,15 @@
                 <View:InfoView></View:InfoView>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type ViewModel:FullPlotViewModel}">
+                <View:FullPlot></View:FullPlot>
+            </DataTemplate>
+
+
+            <DataTemplate DataType="{x:Type ViewModel:TicketsViewModel}">
+                <View:TicketsView></View:TicketsView>
+            </DataTemplate>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />

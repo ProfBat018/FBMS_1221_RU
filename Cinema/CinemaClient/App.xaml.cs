@@ -33,6 +33,7 @@ namespace CinemaClient
 
             // IMessenger messenger = new Messenger();
             // При этом messenger один на всю программу. 
+
             Container.RegisterSingleton<IMessenger, Messenger>(); 
 
             Container.RegisterSingleton<INavigationService, NavigationService>(); // INavigationService ref1 = new NavigationService();
@@ -45,7 +46,10 @@ namespace CinemaClient
             Container.RegisterSingleton<AuthViewModel>();
             Container.RegisterSingleton<RegisterViewModel>();
             Container.RegisterSingleton<InfoViewModel>();
+            Container.RegisterSingleton<FullPlotViewModel>();
+            Container.RegisterSingleton<TicketsViewModel>();
         }
+
 
         private void MainStartup()
         {

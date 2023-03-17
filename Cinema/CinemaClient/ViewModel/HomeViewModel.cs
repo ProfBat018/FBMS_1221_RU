@@ -54,13 +54,13 @@ public class HomeViewModel : ViewModelBase
 
     public RelayCommand<object> InfoCommand
     {
-        get => new(param => 
+        get => new(id => 
         {
             try
             {
-                if (param != null)
+                if (id != null)
                 {
-                    var json = _downloadService.DownloadJson(UriModel.SearchById(param as string));
+                    var json = _downloadService.DownloadJson(UriModel.SearchById(id as string));
                     var data = _serializeService.Deserialize<MovieInfoModel>(json);
                     _navigationService.NavigateTo<InfoViewModel>(data);
                 }

@@ -14,29 +14,59 @@
             Background="{DynamicResource MaterialDesignPaper}"
             FontFamily="{DynamicResource MaterialDesignFont}"
             d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="0.8*"/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="0.4*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Title:"/>
-        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding Movie.Title}"/>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+            <Border>
+                <Border.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="{Binding Movie.Poster}"/>
+                </Border.Background>
+                <Border.Effect>
+                    <BlurEffect Radius="10" KernelType="Gaussian"/>
+                </Border.Effect>
+            </Border>
+            <Image Stretch="Uniform" Source="{Binding Movie.Poster}"/>
+        </Grid>
 
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="{Binding Movie.Year, StringFormat='Year:{0}'}"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Movie.Released, StringFormat='Released:{0}'}"/>
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Movie.Runtime, StringFormat='Runtime:{0}'}"/>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Top" >
+            <Button 
+                Command="{Binding FullPlotCommand}"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Content="Full plot" />
+
+
+            <Button 
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Content="Scores" />
+
+        </StackPanel>
+
+        <TextBlock TextWrapping="Wrap" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding Movie.Title}"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Movie.Year, StringFormat='Year:{0}'}"/>
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Movie.Released, StringFormat='Released:{0}'}"/>
+        <TextBlock Grid.Row="1" Grid.Column="4" Text="{Binding Movie.Runtime, StringFormat='Runtime:{0}'}"/>
+
+        <Button VerticalAlignment="Bottom" Command="{Binding BuyCommand}" Grid.Row="3" Grid.ColumnSpan="6">Buy Tickets</Button>
+        <Button Command="{Binding BackCommand}" Grid.Row="4" Grid.ColumnSpan="6">Back</Button>
+
+        <!--<TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Title:"/>
 
         <Image Source="{Binding Movie.Poster}" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
@@ -48,6 +78,6 @@
         <TextBlock Grid.Row="3" Grid.Column="2" Text="{Binding Movie.imdbVotes, StringFormat='Votes:{0}'}"/>
 
         <TextBlock Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Text="{Binding Movie.Actors}"/>
-        <TextBlock Grid.Row="4" Grid.ColumnSpan="5" Text="{Binding Movie.Plot}"/>
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="5" Text="{Binding Movie.Plot}"/>-->
     </Grid>
 </UserControl>
