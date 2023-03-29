@@ -62,6 +62,7 @@ public class HomeViewModel : ViewModelBase
                 {
                     var json = _downloadService.DownloadJson(UriModel.SearchById(id as string));
                     var data = _serializeService.Deserialize<MovieInfoModel>(json);
+
                     _navigationService.NavigateTo<InfoViewModel>(data);
                 }
             }

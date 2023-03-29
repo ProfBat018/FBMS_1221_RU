@@ -39,9 +39,8 @@
                 Command="{Binding SearchCommand}"
                 Style="{DynamicResource MaterialDesignToolButton}"
                 Width="100px">
-            <mD:PackIcon Height="25" Width="25" Kind="Search"/>
+            <Image Source="pack://siteoforigin:,,/Assets/buttonIcon.png"/>
         </Button>
-
 
 
         <ScrollViewer Grid.ColumnSpan="2" Grid.Row="1" Background="{DynamicResource MaterialDesignCardBackground}">
