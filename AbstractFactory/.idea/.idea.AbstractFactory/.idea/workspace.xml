@@ -4,11 +4,16 @@
     <projectFile>AbstractFactory/AbstractFactory.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908f497e-bbf3-4522-a435-d47babfb1ad9" name="Changes" comment="" />
+    <list default="true" id="908f497e-bbf3-4522-a435-d47babfb1ad9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/AbstractFactory/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AbstractFactory/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NlX8r2vYgl0Ak2OVvKfU5OZ71e" />
   <component name="ProjectViewState">
@@ -59,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680239488879</updated>
       <workItem from="1680239488880" duration="176000" />
+      <workItem from="1680239679673" duration="670000" />
     </task>
     <servers />
   </component>
