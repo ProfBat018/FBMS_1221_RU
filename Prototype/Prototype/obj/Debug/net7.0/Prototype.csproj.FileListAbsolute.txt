@@ -1,0 +1,15 @@
+C:\Work\FBMS_1221_RU\Prototype\Prototype\bin\Debug\net7.0\Prototype.exe
+C:\Work\FBMS_1221_RU\Prototype\Prototype\bin\Debug\net7.0\Prototype.deps.json
+C:\Work\FBMS_1221_RU\Prototype\Prototype\bin\Debug\net7.0\Prototype.runtimeconfig.json
+C:\Work\FBMS_1221_RU\Prototype\Prototype\bin\Debug\net7.0\Prototype.dll
+C:\Work\FBMS_1221_RU\Prototype\Prototype\bin\Debug\net7.0\Prototype.pdb
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.csproj.AssemblyReference.cache
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.AssemblyInfoInputs.cache
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.AssemblyInfo.cs
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.dll
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\refint\Prototype.dll
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.pdb
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\Prototype.genruntimeconfig.cache
+C:\Work\FBMS_1221_RU\Prototype\Prototype\obj\Debug\net7.0\ref\Prototype.dll

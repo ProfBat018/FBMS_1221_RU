@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="View\FullPlot.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MoviesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TicketsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\FullPlot.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MoviesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\TicketsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
