@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{25D466EF-E296-4546-B3A8-43A5CD4BDBBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25D466EF-E296-4546-B3A8-43A5CD4BDBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D466EF-E296-4546-B3A8-43A5CD4BDBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D466EF-E296-4546-B3A8-43A5CD4BDBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D466EF-E296-4546-B3A8-43A5CD4BDBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
