@@ -1,3 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Тема - Abstarct Factory
+// Абстрактная фабрика
+// Создает объекты, связанные между собой, не специфицируя их конкретных классов
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello World");
