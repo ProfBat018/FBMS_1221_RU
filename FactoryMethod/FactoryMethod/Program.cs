@@ -1,3 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Threading.Channels;
+using FactoryMethod;
+using FactoryMethod.Factories.Classes;
 
-Console.WriteLine("Hello, World!");
+IGroceryFactory groceryFactory = new GroceryFactory();
+
+var p1 = groceryFactory.CreateProduct();
+
+
+Console.WriteLine(p1.Name);
