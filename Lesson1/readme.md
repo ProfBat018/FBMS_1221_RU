@@ -1,4 +1,3 @@
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 <foreignObject width="100" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml">
         <h1>
@@ -32,6 +31,8 @@
 </li>
         </ul>
 <h1>О типах данных</h1>
+
+![Chars.png](..%2F..%2F..%2FUsers%2Felvin%2FDesktop%2FChars.png)
 <a target="_blank" href="https://www.w3schools.com/sql/sql_datatypes.asp">Типы данных</a>
 <ul>
 <li>
@@ -122,6 +123,4 @@ Datetime - это дата и время, которые хранятся в ф�
 </li>
 </ul>
     </div>
-
 </foreignObject>
-</svg>
