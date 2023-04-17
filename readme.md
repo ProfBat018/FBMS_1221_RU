@@ -7,36 +7,43 @@ SQL
 </h1>
         <ul>
         <li>
-            <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">Ссылка на скачивание MS SQL Server:</a>
+            <a target="_blank" href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">Ссылка на скачивание MS SQL Server:</a>
         </li>
         <li>
-            <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">Ссылка на скачивание SSMS:</a>
+            <a target="_blank" href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">Ссылка на скачивание SSMS:</a>
         </li>
         <li>
-            <a href="https://www.jetbrains.com/datagrip/download/#section=windows">Ссылка на скачивание DataGrip:</a>
+            <a target="_blank" href="https://www.jetbrains.com/datagrip/download/#section=windows">Ссылка на скачивание DataGrip:</a>
         </li>
         <li>
-            <a href="https://www.jetbrains.com/help/datagrip/quick-start-guide.html">DataGrip - надо натсроить. Вот ссылка на tutorial:</a>    
+            <a target="_blank" href="https://www.jetbrains.com/help/datagrip/quick-start-guide.html">DataGrip - надо натсроить. Вот ссылка на tutorial:</a>    
         </li>
     </ul>
     <p>
     По хорошему, нужно скачать и установить все три, но DataGrip не обязательно. Мне просто так удобнее.
     </p>
-</div>
-</foreignObject>
-</svg>
 
-По хорошему, нужно скачать и установить все три, но DataGrip не обязательно. Мне просто так удобнее.
-
+<p>
 Lesson 1:
 Что такое база данных?
 База данных - это набор данных, которые хранятся в компьютере.
+</p>
 
+<p>
+По хорошему, нужно скачать и установить все три, но DataGrip не обязательно. Мне просто так удобнее.
 При этом что нуно знать:
-
-1. Даже обычный текстовый файл можно считать базой данных.
-2. Binary, XML, JSON, CSV - это тоже базы данных.
-
+</p>
+<ol>
+    <li>
+    Даже обычный текстовый файл можно считать базой данных.
+    </li>
+    <li>
+    Binary, XML, JSON, CSV - это тоже базы данных.
+    </li>
+</ol>
+</div>
+</foreignObject>
+</svg>
 Базы данных бывают:
 
 1. Реляционные - от слова relation (связь). Условно одна таблица связана с другой таблицей
