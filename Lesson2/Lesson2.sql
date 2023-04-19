@@ -28,3 +28,5 @@ select * from Students;
 
 insert into Students (Name, Age, Surname, Email) values ('Elvin', 21, 'Azimov', 'foo@gmail.com');
 
+use master;
+create database MyDb;
