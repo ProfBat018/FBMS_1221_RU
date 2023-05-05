@@ -498,157 +498,167 @@ inner join Faculty on Faculty.Id = Groups.FacultyId
 insert into Students(GroupId) values ('Mccullough', 1);
 
 
-insert into Students (PersonId, GPA, GroupId) values (1, 0.13, 14);
-insert into Students (PersonId, GPA, GroupId) values (2, 3.49, 17);
-insert into Students (PersonId, GPA, GroupId) values (3, 1.22, 16);
-insert into Students (PersonId, GPA, GroupId) values (4, 0.1, 16);
-insert into Students (PersonId, GPA, GroupId) values (5, 0.07, 10);
-insert into Students (PersonId, GPA, GroupId) values (6, 0.14, 15);
-insert into Students (PersonId, GPA, GroupId) values (7, 1.2, 7);
-insert into Students (PersonId, GPA, GroupId) values (8, 4.15, 9);
-insert into Students (PersonId, GPA, GroupId) values (9, 0.13, 15);
-insert into Students (PersonId, GPA, GroupId) values (10, 3.2, 24);
-insert into Students (PersonId, GPA, GroupId) values (11, 2.06, 9);
-insert into Students (PersonId, GPA, GroupId) values (12, 2.91, 2);
-insert into Students (PersonId, GPA, GroupId) values (13, 3.36, 13);
-insert into Students (PersonId, GPA, GroupId) values (14, 4.71, 23);
-insert into Students (PersonId, GPA, GroupId) values (15, 3.24, 1);
-insert into Students (PersonId, GPA, GroupId) values (16, 3.62, 7);
-insert into Students (PersonId, GPA, GroupId) values (17, 0.37, 8);
-insert into Students (PersonId, GPA, GroupId) values (18, 2.52, 11);
-insert into Students (PersonId, GPA, GroupId) values (19, 0.87, 6);
-insert into Students (PersonId, GPA, GroupId) values (20, 0.31, 24);
-insert into Students (PersonId, GPA, GroupId) values (21, 1.76, 6);
-insert into Students (PersonId, GPA, GroupId) values (22, 2.41, 21);
-insert into Students (PersonId, GPA, GroupId) values (23, 1.64, 17);
-insert into Students (PersonId, GPA, GroupId) values (24, 2.3, 9);
-insert into Students (PersonId, GPA, GroupId) values (25, 3.86, 5);
-insert into Students (PersonId, GPA, GroupId) values (26, 0.45, 10);
-insert into Students (PersonId, GPA, GroupId) values (27, 0.36, 1);
-insert into Students (PersonId, GPA, GroupId) values (28, 4.8, 19);
-insert into Students (PersonId, GPA, GroupId) values (29, 1.08, 2);
-insert into Students (PersonId, GPA, GroupId) values (30, 4.43, 23);
-insert into Students (PersonId, GPA, GroupId) values (31, 0.11, 9);
-insert into Students (PersonId, GPA, GroupId) values (32, 3.92, 3);
-insert into Students (PersonId, GPA, GroupId) values (33, 2.36, 23);
-insert into Students (PersonId, GPA, GroupId) values (34, 0.43, 13);
-insert into Students (PersonId, GPA, GroupId) values (35, 3.75, 20);
-insert into Students (PersonId, GPA, GroupId) values (36, 2.44, 14);
-insert into Students (PersonId, GPA, GroupId) values (37, 0.05, 9);
-insert into Students (PersonId, GPA, GroupId) values (38, 1.44, 14);
-insert into Students (PersonId, GPA, GroupId) values (39, 1.09, 25);
-insert into Students (PersonId, GPA, GroupId) values (40, 3.27, 13);
-insert into Students (PersonId, GPA, GroupId) values (41, 1.75, 16);
-insert into Students (PersonId, GPA, GroupId) values (42, 2.27, 22);
-insert into Students (PersonId, GPA, GroupId) values (43, 3.32, 1);
-insert into Students (PersonId, GPA, GroupId) values (44, 2.38, 23);
-insert into Students (PersonId, GPA, GroupId) values (45, 3.33, 13);
-insert into Students (PersonId, GPA, GroupId) values (46, 3.97, 1);
-insert into Students (PersonId, GPA, GroupId) values (47, 2.22, 3);
-insert into Students (PersonId, GPA, GroupId) values (48, 2.7, 13);
-insert into Students (PersonId, GPA, GroupId) values (49, 1.35, 22);
-insert into Students (PersonId, GPA, GroupId) values (50, 0.75, 13);
-insert into Students (PersonId, GPA, GroupId) values (51, 0.85, 11);
-insert into Students (PersonId, GPA, GroupId) values (52, 0.4, 24);
-insert into Students (PersonId, GPA, GroupId) values (53, 3.86, 19);
-insert into Students (PersonId, GPA, GroupId) values (54, 0.6, 9);
-insert into Students (PersonId, GPA, GroupId) values (55, 2.42, 7);
-insert into Students (PersonId, GPA, GroupId) values (56, 3.06, 16);
-insert into Students (PersonId, GPA, GroupId) values (57, 1.01, 21);
-insert into Students (PersonId, GPA, GroupId) values (58, 4.3, 5);
-insert into Students (PersonId, GPA, GroupId) values (59, 2.14, 5);
-insert into Students (PersonId, GPA, GroupId) values (60, 3.58, 18);
-insert into Students (PersonId, GPA, GroupId) values (61, 0.6, 20);
-insert into Students (PersonId, GPA, GroupId) values (62, 2.1, 12);
-insert into Students (PersonId, GPA, GroupId) values (63, 4.79, 1);
-insert into Students (PersonId, GPA, GroupId) values (64, 1.54, 5);
-insert into Students (PersonId, GPA, GroupId) values (65, 0.8, 14);
-insert into Students (PersonId, GPA, GroupId) values (66, 3.55, 9);
-insert into Students (PersonId, GPA, GroupId) values (67, 1.52, 21);
-insert into Students (PersonId, GPA, GroupId) values (68, 3.93, 11);
-insert into Students (PersonId, GPA, GroupId) values (69, 0.96, 3);
-insert into Students (PersonId, GPA, GroupId) values (70, 2.37, 2);
-insert into Students (PersonId, GPA, GroupId) values (71, 4.47, 1);
-insert into Students (PersonId, GPA, GroupId) values (72, 1.3, 22);
-insert into Students (PersonId, GPA, GroupId) values (73, 4.12, 18);
-insert into Students (PersonId, GPA, GroupId) values (74, 1.11, 24);
-insert into Students (PersonId, GPA, GroupId) values (75, 3.32, 21);
-insert into Students (PersonId, GPA, GroupId) values (76, 0.12, 21);
-insert into Students (PersonId, GPA, GroupId) values (77, 4.13, 11);
-insert into Students (PersonId, GPA, GroupId) values (78, 0.7, 15);
-insert into Students (PersonId, GPA, GroupId) values (79, 3.48, 14);
-insert into Students (PersonId, GPA, GroupId) values (80, 4.87, 19);
-insert into Students (PersonId, GPA, GroupId) values (81, 4.44, 15);
-insert into Students (PersonId, GPA, GroupId) values (82, 4.75, 18);
-insert into Students (PersonId, GPA, GroupId) values (83, 3.12, 25);
-insert into Students (PersonId, GPA, GroupId) values (84, 1.24, 12);
-insert into Students (PersonId, GPA, GroupId) values (85, 3.69, 3);
-insert into Students (PersonId, GPA, GroupId) values (86, 3.33, 4);
-insert into Students (PersonId, GPA, GroupId) values (87, 3.44, 3);
-insert into Students (PersonId, GPA, GroupId) values (88, 4.26, 4);
-insert into Students (PersonId, GPA, GroupId) values (89, 1.12, 16);
-insert into Students (PersonId, GPA, GroupId) values (90, 0.28, 24);
-insert into Students (PersonId, GPA, GroupId) values (91, 2.14, 5);
-insert into Students (PersonId, GPA, GroupId) values (92, 1.61, 4);
-insert into Students (PersonId, GPA, GroupId) values (93, 2.91, 4);
-insert into Students (PersonId, GPA, GroupId) values (94, 4.74, 3);
-insert into Students (PersonId, GPA, GroupId) values (95, 4.13, 1);
-insert into Students (PersonId, GPA, GroupId) values (96, 1.45, 12);
-insert into Students (PersonId, GPA, GroupId) values (97, 1.54, 4);
-insert into Students (PersonId, GPA, GroupId) values (98, 1.09, 12);
-insert into Students (PersonId, GPA, GroupId) values (99, 0.68, 2);
-insert into Students (PersonId, GPA, GroupId) values (100, 2.41, 6);
-insert into Students (PersonId, GPA, GroupId) values (101, 4.86, 25);
-insert into Students (PersonId, GPA, GroupId) values (102, 1.71, 18);
-insert into Students (PersonId, GPA, GroupId) values (103, 1.08, 16);
-insert into Students (PersonId, GPA, GroupId) values (104, 3.71, 7);
-insert into Students (PersonId, GPA, GroupId) values (105, 2.52, 13);
-insert into Students (PersonId, GPA, GroupId) values (106, 1.77, 3);
-insert into Students (PersonId, GPA, GroupId) values (107, 1.23, 3);
-insert into Students (PersonId, GPA, GroupId) values (108, 4.1, 6);
-insert into Students (PersonId, GPA, GroupId) values (109, 3.04, 3);
-insert into Students (PersonId, GPA, GroupId) values (110, 3.48, 14);
-insert into Students (PersonId, GPA, GroupId) values (111, 0.1, 16);
-insert into Students (PersonId, GPA, GroupId) values (112, 4.15, 2);
-insert into Students (PersonId, GPA, GroupId) values (113, 4.92, 23);
-insert into Students (PersonId, GPA, GroupId) values (114, 0.75, 12);
-insert into Students (PersonId, GPA, GroupId) values (115, 2.29, 1);
-insert into Students (PersonId, GPA, GroupId) values (116, 4.66, 3);
-insert into Students (PersonId, GPA, GroupId) values (117, 1.5, 4);
-insert into Students (PersonId, GPA, GroupId) values (118, 4.85, 8);
-insert into Students (PersonId, GPA, GroupId) values (119, 4.05, 6);
-insert into Students (PersonId, GPA, GroupId) values (120, 4.41, 5);
-insert into Students (PersonId, GPA, GroupId) values (121, 4.6, 25);
-insert into Students (PersonId, GPA, GroupId) values (122, 0.37, 16);
-insert into Students (PersonId, GPA, GroupId) values (123, 1.34, 1);
-insert into Students (PersonId, GPA, GroupId) values (124, 1.41, 1);
-insert into Students (PersonId, GPA, GroupId) values (125, 2.88, 3);
-insert into Students (PersonId, GPA, GroupId) values (126, 4.08, 20);
-insert into Students (PersonId, GPA, GroupId) values (127, 2.78, 11);
-insert into Students (PersonId, GPA, GroupId) values (128, 2.33, 25);
-insert into Students (PersonId, GPA, GroupId) values (129, 1.99, 8);
-insert into Students (PersonId, GPA, GroupId) values (130, 3.8, 24);
-insert into Students (PersonId, GPA, GroupId) values (131, 1.07, 1);
-insert into Students (PersonId, GPA, GroupId) values (132, 4.97, 9);
-insert into Students (PersonId, GPA, GroupId) values (133, 1.29, 16);
-insert into Students (PersonId, GPA, GroupId) values (134, 3.05, 18);
-insert into Students (PersonId, GPA, GroupId) values (135, 3.94, 15);
-insert into Students (PersonId, GPA, GroupId) values (136, 3.67, 9);
-insert into Students (PersonId, GPA, GroupId) values (137, 1.16, 23);
-insert into Students (PersonId, GPA, GroupId) values (138, 3.46, 25);
-insert into Students (PersonId, GPA, GroupId) values (139, 3.09, 12);
-insert into Students (PersonId, GPA, GroupId) values (140, 4.51, 21);
-insert into Students (PersonId, GPA, GroupId) values (141, 0.47, 20);
-insert into Students (PersonId, GPA, GroupId) values (142, 3.89, 16);
-insert into Students (PersonId, GPA, GroupId) values (143, 2.21, 19);
-insert into Students (PersonId, GPA, GroupId) values (144, 2.34, 5);
-insert into Students (PersonId, GPA, GroupId) values (145, 1.49, 11);
-insert into Students (PersonId, GPA, GroupId) values (146, 4.3, 5);
-insert into Students (PersonId, GPA, GroupId) values (147, 3.42, 10);
-insert into Students (PersonId, GPA, GroupId) values (148, 4.0, 3);
-insert into Students (PersonId, GPA, GroupId) values (149, 1.03, 1);
-
 
 select * from Students
 inner join Groups G on G.Id = Students.GroupId
 inner join Person P on P.Id = Students.PersonId
+
+
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 1', 1, 1);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 2', 1, 1);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 3', 1, 1);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 4', 1, 1);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 5', 1, 1);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 6', 1, 2);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 7', 1, 2);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 8', 1, 2);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 9', 1, 2);
+INSERT INTO Groups (Name, Course, FacultyId) VALUES (N'Group 10', 1, 2);
+
+
+
+select AVG(GPA) from Students
+inner join Groups G on G.Id = Students.GroupId
+group by G.Id
+
+
+-- DBCC - это команда, которая позволяет получить информацию о базе данных.
+-- Например, можно получить информацию о размере базы данных, о количестве строк в таблице и т.д.
+
+DBCC CHECKIDENT ('Groups', RESEED, 0)
+DBCC CHECKIDENT ('Students', RESEED, 0)
+
+select * from Groups
+delete  from Students
+
+delete from Groups
+
+
+select * from Teachers
+inner join Person P on P.Id = Teachers.PersonId
+
+insert into Students (PersonId, GroupId, GPA) values (30, 7, 3.9);
+insert into Students (PersonId, GroupId, GPA) values (31, 8, 1.4);
+insert into Students (PersonId, GroupId, GPA) values (32, 3, 4.4);
+insert into Students (PersonId, GroupId, GPA) values (33, 8, 2.7);
+insert into Students (PersonId, GroupId, GPA) values (34, 10, 2.6);
+insert into Students (PersonId, GroupId, GPA) values (35, 5, 2.3);
+insert into Students (PersonId, GroupId, GPA) values (36, 1, 3.6);
+insert into Students (PersonId, GroupId, GPA) values (37, 3, 4.5);
+insert into Students (PersonId, GroupId, GPA) values (38, 4, 4.1);
+insert into Students (PersonId, GroupId, GPA) values (39, 7, 3.2);
+insert into Students (PersonId, GroupId, GPA) values (40, 7, 1.8);
+insert into Students (PersonId, GroupId, GPA) values (41, 5, 4.4);
+insert into Students (PersonId, GroupId, GPA) values (42, 8, 2.0);
+insert into Students (PersonId, GroupId, GPA) values (43, 8, 2.6);
+insert into Students (PersonId, GroupId, GPA) values (44, 10, 2.5);
+insert into Students (PersonId, GroupId, GPA) values (45, 6, 3.8);
+insert into Students (PersonId, GroupId, GPA) values (46, 4, 3.6);
+insert into Students (PersonId, GroupId, GPA) values (47, 8, 1.7);
+insert into Students (PersonId, GroupId, GPA) values (48, 7, 4.1);
+insert into Students (PersonId, GroupId, GPA) values (49, 10, 4.4);
+insert into Students (PersonId, GroupId, GPA) values (50, 7, 4.6);
+insert into Students (PersonId, GroupId, GPA) values (51, 6, 1.4);
+insert into Students (PersonId, GroupId, GPA) values (52, 7, 4.5);
+insert into Students (PersonId, GroupId, GPA) values (53, 10, 1.9);
+insert into Students (PersonId, GroupId, GPA) values (54, 3, 2.7);
+insert into Students (PersonId, GroupId, GPA) values (55, 10, 3.6);
+insert into Students (PersonId, GroupId, GPA) values (56, 3, 4.1);
+insert into Students (PersonId, GroupId, GPA) values (57, 6, 4.8);
+insert into Students (PersonId, GroupId, GPA) values (58, 10, 2.8);
+insert into Students (PersonId, GroupId, GPA) values (59, 5, 4.8);
+insert into Students (PersonId, GroupId, GPA) values (60, 5, 3.1);
+insert into Students (PersonId, GroupId, GPA) values (61, 6, 2.2);
+insert into Students (PersonId, GroupId, GPA) values (62, 10, 4.2);
+insert into Students (PersonId, GroupId, GPA) values (63, 8, 3.0);
+insert into Students (PersonId, GroupId, GPA) values (64, 1, 3.0);
+insert into Students (PersonId, GroupId, GPA) values (65, 9, 4.4);
+insert into Students (PersonId, GroupId, GPA) values (66, 10, 3.7);
+insert into Students (PersonId, GroupId, GPA) values (67, 3, 2.8);
+insert into Students (PersonId, GroupId, GPA) values (68, 3, 3.8);
+insert into Students (PersonId, GroupId, GPA) values (69, 4, 1.6);
+insert into Students (PersonId, GroupId, GPA) values (70, 4, 4.5);
+insert into Students (PersonId, GroupId, GPA) values (71, 4, 3.8);
+insert into Students (PersonId, GroupId, GPA) values (72, 1, 4.1);
+insert into Students (PersonId, GroupId, GPA) values (73, 4, 1.6);
+insert into Students (PersonId, GroupId, GPA) values (74, 6, 1.5);
+insert into Students (PersonId, GroupId, GPA) values (75, 4, 3.2);
+insert into Students (PersonId, GroupId, GPA) values (76, 3, 4.3);
+insert into Students (PersonId, GroupId, GPA) values (77, 1, 2.9);
+insert into Students (PersonId, GroupId, GPA) values (78, 6, 2.1);
+insert into Students (PersonId, GroupId, GPA) values (79, 7, 1.0);
+insert into Students (PersonId, GroupId, GPA) values (80, 10, 3.3);
+insert into Students (PersonId, GroupId, GPA) values (81, 6, 3.0);
+insert into Students (PersonId, GroupId, GPA) values (82, 7, 4.5);
+insert into Students (PersonId, GroupId, GPA) values (83, 7, 3.5);
+insert into Students (PersonId, GroupId, GPA) values (84, 7, 1.3);
+insert into Students (PersonId, GroupId, GPA) values (85, 8, 2.9);
+insert into Students (PersonId, GroupId, GPA) values (86, 7, 1.8);
+insert into Students (PersonId, GroupId, GPA) values (87, 4, 3.6);
+insert into Students (PersonId, GroupId, GPA) values (88, 4, 1.8);
+insert into Students (PersonId, GroupId, GPA) values (89, 10, 3.1);
+insert into Students (PersonId, GroupId, GPA) values (90, 1, 3.7);
+insert into Students (PersonId, GroupId, GPA) values (91, 7, 3.5);
+insert into Students (PersonId, GroupId, GPA) values (92, 1, 1.7);
+insert into Students (PersonId, GroupId, GPA) values (93, 9, 2.1);
+insert into Students (PersonId, GroupId, GPA) values (94, 10, 1.2);
+insert into Students (PersonId, GroupId, GPA) values (95, 5, 1.5);
+insert into Students (PersonId, GroupId, GPA) values (96, 3, 4.9);
+insert into Students (PersonId, GroupId, GPA) values (97, 10, 4.6);
+insert into Students (PersonId, GroupId, GPA) values (98, 6, 3.6);
+insert into Students (PersonId, GroupId, GPA) values (99, 6, 4.6);
+insert into Students (PersonId, GroupId, GPA) values (100, 4, 1.2);
+insert into Students (PersonId, GroupId, GPA) values (101, 8, 2.6);
+insert into Students (PersonId, GroupId, GPA) values (102, 6, 2.5);
+insert into Students (PersonId, GroupId, GPA) values (103, 1, 3.2);
+insert into Students (PersonId, GroupId, GPA) values (104, 6, 4.4);
+insert into Students (PersonId, GroupId, GPA) values (105, 9, 1.4);
+insert into Students (PersonId, GroupId, GPA) values (106, 5, 4.1);
+insert into Students (PersonId, GroupId, GPA) values (107, 5, 3.8);
+insert into Students (PersonId, GroupId, GPA) values (108, 5, 2.7);
+insert into Students (PersonId, GroupId, GPA) values (109, 6, 1.9);
+insert into Students (PersonId, GroupId, GPA) values (110, 4, 4.0);
+insert into Students (PersonId, GroupId, GPA) values (111, 1, 3.0);
+insert into Students (PersonId, GroupId, GPA) values (112, 2, 2.1);
+insert into Students (PersonId, GroupId, GPA) values (113, 4, 3.9);
+insert into Students (PersonId, GroupId, GPA) values (114, 8, 3.6);
+insert into Students (PersonId, GroupId, GPA) values (115, 2, 3.8);
+insert into Students (PersonId, GroupId, GPA) values (116, 7, 4.7);
+insert into Students (PersonId, GroupId, GPA) values (117, 3, 1.4);
+insert into Students (PersonId, GroupId, GPA) values (118, 7, 3.7);
+insert into Students (PersonId, GroupId, GPA) values (119, 5, 2.0);
+insert into Students (PersonId, GroupId, GPA) values (120, 9, 4.5);
+insert into Students (PersonId, GroupId, GPA) values (121, 3, 2.2);
+insert into Students (PersonId, GroupId, GPA) values (122, 7, 2.0);
+insert into Students (PersonId, GroupId, GPA) values (123, 8, 2.4);
+insert into Students (PersonId, GroupId, GPA) values (124, 7, 1.2);
+insert into Students (PersonId, GroupId, GPA) values (125, 8, 2.1);
+insert into Students (PersonId, GroupId, GPA) values (126, 4, 2.8);
+insert into Students (PersonId, GroupId, GPA) values (127, 3, 2.5);
+insert into Students (PersonId, GroupId, GPA) values (128, 3, 2.4);
+insert into Students (PersonId, GroupId, GPA) values (129, 8, 1.5);
+insert into Students (PersonId, GroupId, GPA) values (130, 5, 4.0);
+insert into Students (PersonId, GroupId, GPA) values (131, 4, 4.0);
+insert into Students (PersonId, GroupId, GPA) values (132, 2, 1.8);
+insert into Students (PersonId, GroupId, GPA) values (133, 5, 4.6);
+insert into Students (PersonId, GroupId, GPA) values (134, 3, 3.3);
+insert into Students (PersonId, GroupId, GPA) values (135, 7, 1.2);
+insert into Students (PersonId, GroupId, GPA) values (136, 1, 3.7);
+insert into Students (PersonId, GroupId, GPA) values (137, 10, 4.9);
+insert into Students (PersonId, GroupId, GPA) values (138, 7, 1.2);
+insert into Students (PersonId, GroupId, GPA) values (139, 5, 4.9);
+insert into Students (PersonId, GroupId, GPA) values (140, 10, 4.7);
+insert into Students (PersonId, GroupId, GPA) values (141, 3, 2.6);
+insert into Students (PersonId, GroupId, GPA) values (142, 1, 3.3);
+insert into Students (PersonId, GroupId, GPA) values (143, 6, 1.7);
+insert into Students (PersonId, GroupId, GPA) values (144, 3, 2.9);
+insert into Students (PersonId, GroupId, GPA) values (145, 2, 4.2);
+insert into Students (PersonId, GroupId, GPA) values (146, 9, 1.2);
+insert into Students (PersonId, GroupId, GPA) values (147, 9, 1.2);
+insert into Students (PersonId, GroupId, GPA) values (148, 7, 1.1);
+insert into Students (PersonId, GroupId, GPA) values (149, 10, 4.8);
+
+
+select * from Students
+
+
