@@ -97,4 +97,19 @@ select * from Groups
 
 
 
+use Academy
 
+create table Parent(ID int primary key );
+
+create table Child(Id int, ParentId int foreign key references Parent(Id) on delete cascade );
+
+
+insert into Parent values(1);
+insert into Parent values(2);
+
+insert into Child values(1, 1);
+insert into Child values(2, 1);
+
+delete from Parent where Id = 1;
+
+select * from Child
