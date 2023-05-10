@@ -1,8 +1,5 @@
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-<foreignObject width="100" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-<h1>
-SQL 
+# [SQL ROADMAP](https://www.databasestar.com/sql-roadmap/)
+
 Все примеры кода в этом руководстве были написаны на MS SQL SERVER 2022. 
 </h1>
         <ul>
