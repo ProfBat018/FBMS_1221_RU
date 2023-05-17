@@ -34,7 +34,7 @@ begin
 end
 
 create trigger DropProduct3 on database
-    for DROP_TABLE
+    for DROP_TABLE`
     as
 begin
     declare @tableName nvarchar(50) set @tableName = EVENTDATA().value('(/EVENT_INSTANCE/ObjectName)[1]', 'nvarchar(50)');
