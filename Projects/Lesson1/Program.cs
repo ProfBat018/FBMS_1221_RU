@@ -30,6 +30,7 @@ while (reader.Read())
 {
     Console.WriteLine($"{reader.GetInt32(0)}\t{reader.GetInt32(1)}");
 }
+
 #endregion
 
 #region ReadScalar
@@ -45,7 +46,6 @@ while (reader.Read())
 //
 // Console.WriteLine($"Count: {count}");
 
-#endregion
 
 #region ExecuteNonQuery
 /*
@@ -73,7 +73,6 @@ Console.WriteLine($"Rows affected: {rowsAffected}");
 */
 #endregion
 
-    
-
+#endregion
 
 
