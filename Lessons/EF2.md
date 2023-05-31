@@ -12,7 +12,7 @@
 
 Лучше делать вот так:
 ```csharp
-    var users = context.Users.Select(u => u.Name).ToList();
+    var users = context.Users.Select(u => u.Name);
     foreach(var user in users)
     {
         Console.WriteLine(user);

@@ -1,0 +1,15 @@
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\bin\Debug\net7.0\OwnAttribute.exe
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\bin\Debug\net7.0\OwnAttribute.deps.json
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\bin\Debug\net7.0\OwnAttribute.runtimeconfig.json
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\bin\Debug\net7.0\OwnAttribute.dll
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\bin\Debug\net7.0\OwnAttribute.pdb
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.csproj.AssemblyReference.cache
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.AssemblyInfoInputs.cache
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.AssemblyInfo.cs
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.dll
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\refint\OwnAttribute.dll
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.pdb
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\OwnAttribute.genruntimeconfig.cache
+C:\Work\FBMS_1221_RU\Projects\OwnAttribute\OwnAttribute\obj\Debug\net7.0\ref\OwnAttribute.dll
