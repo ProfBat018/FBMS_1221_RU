@@ -29,6 +29,8 @@ public class AcademyDbContext : DbContext
         
         optionsBuilder.UseSqlServer(connectionString);
     }
+    
+    
 }
 
 
