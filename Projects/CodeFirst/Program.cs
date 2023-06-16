@@ -1,24 +1,24 @@
 ﻿using System.Threading.Channels;
 using CodeFirst.Data.DbContexts;
 using CodeFirst.Data.Models;
+using Microsoft.Identity.Client;
 
-Console.WriteLine("Foo");
+#region Part1
 
-
-using var context = new AcademyDbContext();
-
-List<Person> people = new List<Person>()
-{
-    new Person() { Name = "Elvin", Surname = "Azimov", Age = 21 },
-    new Person() { Name = "Emil", Surname = "Moryakov", Age = 17 },
-    new Person() { Name = "Magamed", Surname = "Babayev", Age = 16 },
-    new Person() { Name = "Farhad", Surname = "Zulfuqarov", Age = 19 },
-    new Person() { Name = "Murad", Surname = "Orucov", Age = 16},
-    new Person() { Name = "Magomed", Surname = "Quluyev", Age = 22 },
-    new Person() { Name = "Mamed", Surname = "Panahov", Age = 24 },
-    new Person() { Name = "Lala", Surname = "Mamedova", Age = 24 },
-    new Person() { Name = "Laman", Surname = "Aliyeva", Age = 26 }
-};
+// using var context = new AcademyDbContext();
+//
+// List<Person> people = new List<Person>()
+// {
+//     new Person() { Name = "Elvin", Surname = "Azimov", Age = 21 },
+//     new Person() { Name = "Emil", Surname = "Moryakov", Age = 17 },
+//     new Person() { Name = "Magamed", Surname = "Babayev", Age = 16 },
+//     new Person() { Name = "Farhad", Surname = "Zulfuqarov", Age = 19 },
+//     new Person() { Name = "Murad", Surname = "Orucov", Age = 16},
+//     new Person() { Name = "Magomed", Surname = "Quluyev", Age = 22 },
+//     new Person() { Name = "Mamed", Surname = "Panahov", Age = 24 },
+//     new Person() { Name = "Lala", Surname = "Mamedova", Age = 24 },
+//     new Person() { Name = "Laman", Surname = "Aliyeva", Age = 26 }
+// };
 
 // context.People.AddRange(people);
 // context.SaveChanges();
@@ -80,7 +80,16 @@ List<Person> people = new List<Person>()
 // context.SaveChanges();
 
 
-foreach (var item in context.People.AsQueryable())
-{
-    Console.WriteLine(item);
-}
+// foreach (var item in context.People.AsQueryable())
+// {
+//     Console.WriteLine(item);
+// }
+
+#endregion
+
+
+#region Part2
+
+
+
+#endregion
