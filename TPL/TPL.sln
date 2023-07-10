@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPL", "TPL\TPL.csproj", "{4C86C6F4-A927-430B-B0B6-31C411171411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonRepo", "..\..\FBAS_4217_RU\REST\PersonRepo\PersonRepo.csproj", "{23C26FDF-457F-4ED6-9B32-608D023EB94C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C86C6F4-A927-430B-B0B6-31C411171411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C86C6F4-A927-430B-B0B6-31C411171411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C86C6F4-A927-430B-B0B6-31C411171411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C86C6F4-A927-430B-B0B6-31C411171411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23C26FDF-457F-4ED6-9B32-608D023EB94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C26FDF-457F-4ED6-9B32-608D023EB94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C26FDF-457F-4ED6-9B32-608D023EB94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C26FDF-457F-4ED6-9B32-608D023EB94C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

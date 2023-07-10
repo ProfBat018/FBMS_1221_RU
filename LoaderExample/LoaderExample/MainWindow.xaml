@@ -1,0 +1,34 @@
+﻿<Window
+    Height="450"
+    Title="MainWindow"
+    Width="800"
+    mc:Ignorable="d"
+    x:Class="LoaderExample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LoaderExample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1">
+            <ListBox Height="350px" Name="DataListBox" />
+            <StackPanel Height="50px" Orientation="Horizontal">
+                <ProgressBar
+                    HorizontalAlignment="Left"
+                    Name="ProgressBar"
+                    Width="300px" />
+                <Button
+                    Click="LoadBtn_OnClick"
+                    Name="LoadBtn"
+                    Width="100px">
+                    Load
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
