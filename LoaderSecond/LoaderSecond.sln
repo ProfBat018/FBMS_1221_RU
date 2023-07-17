@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoaderSecond", "LoaderSecond\LoaderSecond.csproj", "{72EC1FD5-74B5-4BC3-90B5-E827F35C53F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonRepo", "..\..\FBAS_4217_RU\REST\PersonRepo\PersonRepo.csproj", "{B06F13E0-B1BD-46F3-A5A0-D26C56CFA9B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72EC1FD5-74B5-4BC3-90B5-E827F35C53F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72EC1FD5-74B5-4BC3-90B5-E827F35C53F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72EC1FD5-74B5-4BC3-90B5-E827F35C53F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72EC1FD5-74B5-4BC3-90B5-E827F35C53F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06F13E0-B1BD-46F3-A5A0-D26C56CFA9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06F13E0-B1BD-46F3-A5A0-D26C56CFA9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06F13E0-B1BD-46F3-A5A0-D26C56CFA9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06F13E0-B1BD-46F3-A5A0-D26C56CFA9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -83,3 +83,37 @@ List<int> res = await DoWork2();
 res.ForEach(x => Console.WriteLine(x));
 */
 #endregion
+
+#region Part4
+
+/*
+using System.Diagnostics;
+Thread th1 = new(() =>
+{
+    Console.WriteLine("My own thread started");
+    Console.WriteLine($"Thread id: {Thread.CurrentThread.ManagedThreadId}" +
+                      $"Is thread pool thread: {Thread.CurrentThread.IsThreadPoolThread}" +
+                      $"Is background thread: {Thread.CurrentThread.IsBackground}");
+});
+
+
+th1.Start();
+
+Thread.Sleep(1000);
+
+ThreadPool.QueueUserWorkItem((state) =>
+{
+    Console.WriteLine("Threadpool thread started");
+    Console.WriteLine($"Thread id: {Thread.CurrentThread.ManagedThreadId}" +
+                      $"Is thread pool thread: {Thread.CurrentThread.IsThreadPoolThread}" +
+                      $"Is background thread: {Thread.CurrentThread.IsBackground}");
+});
+
+*/
+#endregion
+
+
+#region Part5
+
+
+#endregion
