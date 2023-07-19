@@ -1,0 +1,15 @@
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\bin\Debug\net7.0\Client.exe
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\bin\Debug\net7.0\Client.deps.json
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\bin\Debug\net7.0\Client.runtimeconfig.json
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\bin\Debug\net7.0\Client.dll
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\bin\Debug\net7.0\Client.pdb
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.csproj.AssemblyReference.cache
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.AssemblyInfoInputs.cache
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.AssemblyInfo.cs
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.csproj.CoreCompileInputs.cache
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.dll
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\refint\Client.dll
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.pdb
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\Client.genruntimeconfig.cache
+C:\Work\FBMS_1221_RU\TcpListenerFirst\Client\obj\Debug\net7.0\ref\Client.dll
