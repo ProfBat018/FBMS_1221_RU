@@ -1,0 +1,68 @@
+﻿<Window
+    Height="450"
+    Title="MainWindow"
+    Width="450"
+    mc:Ignorable="d"
+    x:Class="ClientUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ClientUI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*" />
+            <RowDefinition />
+            <RowDefinition Height="0.1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBox
+            FontSize="20"
+            Name="IpTextBox"
+            Width="135">
+            10.1.10.38
+        </TextBox>
+        <TextBox
+            FontSize="20"
+            Grid.Column="1"
+            Name="UsernameTextBox"
+            Width="135">
+            Elvin
+        </TextBox>
+        <Button
+            Click="ConnectBtn_OnClick"
+            FontSize="20"
+            Grid.Column="2"
+            Grid.Row="0"
+            Name="ConnectBtn">
+            Connect
+        </Button>
+
+        <ListBox
+            Grid.ColumnSpan="3"
+            Grid.Row="1"
+            Name="MessageListBox" />
+
+        <TextBox
+            FontSize="20"
+            Grid.Column="0"
+            Grid.Row="2"
+            Name="MessageTextBox">
+            Hello
+        </TextBox>
+        <Button
+            Click="SendBtn_OnClick"
+            FontSize="20"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="2"
+            Name="SendBtn">
+            Send
+        </Button>
+    </Grid>
+</Window>

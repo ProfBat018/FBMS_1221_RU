@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xKtxL7eZ48MveTC6lOxw9WoPgUVxmGTtnbu+OlQl0CnK0AUQ3NWQT85piycy9zhW2lpvIqr5IA7ZgEZlFNDfBA==",
+  "dgSpecHash": "hTMEjW+++chqd4KlDqARzSjlGIaxMdWEQ45OHy7g0dOSjjpwhfVNwECjgwcBAF4I/ApDo/zDTxi50Om6WVKYjQ==",
   "success": true,
   "projectFilePath": "C:\\Work\\FBMS_1221_RU\\Messenger\\Server\\Server.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\elvin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

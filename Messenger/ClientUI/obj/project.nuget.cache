@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "M7i4mIGBwpr8IfXH5ZUaqI/wqoQIedakms8MJ7zAdcyv7KCxcJh8YYc5zGiir0mQ4iqe5WS/ZJtX872N18k03g==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\FBMS_1221_RU\\Messenger\\ClientUI\\ClientUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elvin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
