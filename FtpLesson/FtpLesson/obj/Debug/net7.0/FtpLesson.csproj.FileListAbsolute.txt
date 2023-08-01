@@ -1,0 +1,15 @@
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\bin\Debug\net7.0\FtpLesson.exe
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\bin\Debug\net7.0\FtpLesson.deps.json
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\bin\Debug\net7.0\FtpLesson.runtimeconfig.json
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\bin\Debug\net7.0\FtpLesson.dll
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\bin\Debug\net7.0\FtpLesson.pdb
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.csproj.AssemblyReference.cache
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.AssemblyInfoInputs.cache
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.AssemblyInfo.cs
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.csproj.CoreCompileInputs.cache
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.dll
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\refint\FtpLesson.dll
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.pdb
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\FtpLesson.genruntimeconfig.cache
+C:\Work\FBAS_4217_RU\Projects\FtpLesson\FtpLesson\obj\Debug\net7.0\ref\FtpLesson.dll
