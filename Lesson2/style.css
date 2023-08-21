@@ -1,0 +1,31 @@
+h3 {
+    color: rgb(1, 97, 55);
+}
+
+#my-paragraph {
+    color: rgb(63, 0, 188);
+}
+
+.my-paragraph {
+    color: rgb(188, 0, 0);
+}
+
+
+
+.my-list {
+    background-color: lightblue;
+    list-style-type: none;
+}
+
+
+.my-list li {
+    background-color: lightgreen;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* .list-item {
+    background-color: lightgreen;
+    margin-top: 10px;
+    padding: 10px;
+} */
