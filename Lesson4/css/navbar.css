@@ -1,0 +1,155 @@
+/* Хорошо */
+/* .nav-body {
+    list-style-type: none;
+}
+.nav-body li {
+    display: inline-block;
+    padding: 10px;
+} */
+
+/* Хорошо */
+/* .nav-body {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
+
+/* Плохо */
+
+/* .nav-body {
+    list-style-type: none;
+}
+
+.nav-body li {
+    display: inline;
+    padding: 10px;
+} */
+
+
+@font-face {
+    font-family: "JhengHei Regular";
+    src: url(/Lesson4/assets/MicrosoftJhengHeiRegular.ttf);
+}
+
+@font-face {
+    font-family: "Tech Mono";
+    src: url(/Lesson4/assets/ShareTechMono-Regular.ttf);
+}
+
+
+.nav-main {
+    padding: 0 5% 0 5%;
+    background-color: black;
+    display: flex;
+    height: 60px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-body {
+    margin: 0 5% 0 5%;
+    height: 100%;
+    width: 50%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-body li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    height: 100%;
+    transition: ease-in-out 0.3s;
+    
+}
+
+.nav-body a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: ease-in-out 0.1s;
+    margin: 0;
+    font-family: "Tech Mono";
+    white-space: nowrap;
+}
+
+
+.nav-body li:hover a {
+    color: red;
+}
+
+.nav-logo {
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+}
+
+.nav-logo:hover {
+    cursor: pointer;
+}
+
+.nav-logo a {
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-logo img {
+    height: 50%;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-end {
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-end-logo {
+    width: 60%;
+    height: 100%;
+    margin: 0 20px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-end-logo:hover {
+    cursor: pointer;
+    
+}
+
+.btn {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    transition: 0.1s;
+    margin: 0 5x 0 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:hover i {
+    color: red;
+}
+
+button i {
+    font-size: 1.5em;
+    color: white;
+}
