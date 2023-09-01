@@ -1,34 +1,3 @@
-/* Хорошо */
-/* .nav-body {
-    list-style-type: none;
-}
-.nav-body li {
-    display: inline-block;
-    padding: 10px;
-} */
-
-/* Хорошо */
-/* .nav-body {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-} */
-
-
-/* Плохо */
-
-/* .nav-body {
-    list-style-type: none;
-}
-
-.nav-body li {
-    display: inline;
-    padding: 10px;
-} */
-
-
 @font-face {
     font-family: "JhengHei Regular";
     src: url(/Lesson4/assets/MicrosoftJhengHeiRegular.ttf);
@@ -39,17 +8,17 @@
     src: url(/Lesson4/assets/ShareTechMono-Regular.ttf);
 }
 
-
 .nav-main {
     padding: 0 5% 0 5%;
     background-color: black;
     display: flex;
-    height: 60px;
+    height: 40px; /* Updated height */
     justify-content: flex-start;
     align-items: center;
 }
+
 .nav-menu-btn {
-    display: none;
+    display: block; /* Show the menu button */
 }
 
 .nav-body {
@@ -57,7 +26,7 @@
     height: 100%;
     width: 50%;
     list-style-type: none;
-    display: flex;
+    display: none; /* Hide the navigation links */
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
@@ -71,7 +40,6 @@
     text-align: center;
     height: 100%;
     transition: ease-in-out 0.3s;
-    
 }
 
 .nav-body a {
@@ -86,7 +54,6 @@
     white-space: nowrap;
 }
 
-
 .nav-body li:hover a {
     color: red;
 }
@@ -95,7 +62,7 @@
     object-fit: cover;
     display: flex;
     justify-content: center;
-    width: 15%;
+    width: 30%; /* Updated width */
     height: 100%;
 }
 
@@ -104,10 +71,9 @@
 }
 
 .nav-logo a {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
-
 
 .nav-logo img {
     height: 50%;
@@ -117,7 +83,7 @@
 
 .nav-end {
     height: 100%;
-    width: 15%;
+    width: 30%; /* Updated width */
     display: flex;
     justify-content: flex-end;
 }
@@ -132,7 +98,6 @@
 
 .nav-end-logo:hover {
     cursor: pointer;
-    
 }
 
 .btn {
@@ -141,7 +106,7 @@
     box-shadow: none;
     border-radius: 0px;
     transition: 0.1s;
-    margin: 0 5x 0 5px;
+    margin: 0 5px 0 5px; /* Updated margin */
 }
 
 .btn:hover {
@@ -153,17 +118,23 @@
 }
 
 button i {
-    font-size: 1.5em;
+    font-size: 1em; /* Updated font-size */
     color: white;
 }
 
-
-.nav-dropdown {
-    display: none;
-    background-color: white;
-    width: 200px;
+/* Show the navigation links when the menu button is clicked */
+.nav-menu-btn:checked ~ .nav-body {
+    display: flex;
     position: absolute;
-    top: 50px;
-    left: 25%;
-    z-index: 2;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
