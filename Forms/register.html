@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Forms</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sign-in">
+            <h1>Sign Up</h1>
+            <form class="login-form">
+                <div class="form-item">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Username">
+                </div>
+
+                <div class="form-item">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email">
+                </div>
+
+                
+                <div class="form-item">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Password">
+                </div>
+
+                <div class="form-item">
+                    <label for="confirm">Confirm Password</label>
+                    <input id="confirm" name="confirm" type="password" placeholder="Confirm Password">
+                </div>
+
+                <div class="next-page">
+                    <a href="./index.html">Already have an acoount ? Sign In</a>
+                </div>
+                    
+                <button type="submit" value="SignUp">Sign Up</button>
+
+            </form>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script src="./register.js"></script>
+</body>
+
+</html>

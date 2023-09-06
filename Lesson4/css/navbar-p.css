@@ -1,140 +1,127 @@
 @font-face {
-    font-family: "JhengHei Regular";
-    src: url(/Lesson4/assets/MicrosoftJhengHeiRegular.ttf);
+  font-family: "JhengHei Regular";
+  src: url(/Lesson4/assets/MicrosoftJhengHeiRegular.ttf);
 }
-
 @font-face {
-    font-family: "Tech Mono";
-    src: url(/Lesson4/assets/ShareTechMono-Regular.ttf);
+  font-family: "Tech Mono";
+  src: url(/Lesson4/assets/ShareTechMono-Regular.ttf);
 }
-
+/* Show the navigation links when the menu button is clicked */
 .nav-main {
-    padding: 0 5% 0 5%;
-    background-color: black;
-    display: flex;
-    height: 40px; /* Updated height */
-    justify-content: flex-start;
-    align-items: center;
+  padding: 0 5% 0 5%;
+  background-color: black;
+  display: flex;
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .nav-menu-btn {
-    display: block; /* Show the menu button */
+  display: block;
+}
+.nav-menu-btn:checked ~ .nav-body {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-body {
-    margin: 0 5% 0 5%;
-    height: 100%;
-    width: 50%;
-    list-style-type: none;
-    display: none; /* Hide the navigation links */
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-evenly;
+  margin: 0 5% 0 5%;
+  height: 100%;
+  width: 50%;
+  list-style-type: none;
+  display: none;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
 .nav-body li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-    height: 100%;
-    transition: ease-in-out 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  height: 100%;
+  transition: ease-in-out 0.3s;
 }
-
-.nav-body a {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    transition: ease-in-out 0.1s;
-    margin: 0;
-    font-family: "Tech Mono";
-    white-space: nowrap;
-}
-
 .nav-body li:hover a {
-    color: red;
+  color: red;
+}
+.nav-body a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: ease-in-out 0.1s;
+  margin: 0;
+  font-family: "Tech Mono";
+  white-space: nowrap;
 }
 
 .nav-logo {
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    width: 30%; /* Updated width */
-    height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
 }
-
 .nav-logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 .nav-logo a {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-
 .nav-logo img {
-    height: 50%;
-    width: auto;
-    object-fit: contain;
+  height: 50%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .nav-end {
-    height: 100%;
-    width: 30%; /* Updated width */
-    display: flex;
-    justify-content: flex-end;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-end-logo {
-    width: 60%;
-    height: 100%;
-    margin: 0 20px 0 0;
-    display: flex;
-    align-items: center;
+  width: 60%;
+  height: 100%;
+  margin: 0 20px 0 0;
+  display: flex;
+  align-items: center;
 }
-
 .nav-end-logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn {
-    border: 0;
-    background: none;
-    box-shadow: none;
-    border-radius: 0px;
-    transition: 0.1s;
-    margin: 0 5px 0 5px; /* Updated margin */
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+  transition: 0.1s;
+  margin: 0 5px 0 5px;
 }
-
 .btn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 .btn:hover i {
-    color: red;
+  color: red;
 }
 
 button i {
-    font-size: 1em; /* Updated font-size */
-    color: white;
-}
-
-/* Show the navigation links when the menu button is clicked */
-.nav-menu-btn:checked ~ .nav-body {
-    display: flex;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
+  font-size: 1em;
+  color: white;
+}/*# sourceMappingURL=navbar-p.css.map */

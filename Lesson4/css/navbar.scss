@@ -1,0 +1,152 @@
+@import 'addons';
+
+@mixin displayFlex($align: center, $justify: center, $direction: row, $wrap: nowrap) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+}
+
+@function rem($pixels) {
+	@return ($pixels / 16) * 1rem;
+}
+
+.nav-main {
+	@include displayFlex(center, flex-start, row, nowrap);
+	padding: 0 5% 0 5%;
+	background-color: $background-color_1;
+	height: 60px;
+}
+
+.nav-menu-btn {
+	display: none;
+}
+
+.nav-body {
+	@include displayFlex(center, space-evenly, row, nowrap);
+	margin: 0 5% 0 5%;
+	height: 100%;
+	width: 50%;
+	list-style-type: none;
+	position: relative;
+
+	ul {
+		display: none;
+		position: absolute; 
+		top: 60px;
+		left: 220px;
+	}
+	li {
+		@include displayFlex(center, center, row, wrap);
+		display: inline-block;
+		height: 100%;
+		text-align: center;
+		height: 100%;
+		transition: ease-in-out 0.3s;
+
+		&:hover > ul {
+			list-style-type: none;
+			display: inherit;
+			a {
+				color: $color_2;
+			}
+		}
+		
+			li {
+				width: 170px;
+				float: none;
+				color: white;
+				background-color: black;
+				display: list-item;
+				position: relative;
+			}
+	}
+
+	a {
+		@include displayFlex(center, center, row, wrap);
+		height: 100%;
+		color: $color_1;
+		text-decoration: none;
+		transition: ease-in-out 0.1s;
+		margin: 0;
+		font-family: $font-family_1;
+		white-space: nowrap;
+	}
+}
+
+.nav-logo {
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+	width: 15%;
+	height: 100%;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+	}
+
+	img {
+		height: 50%;
+		width: auto;
+		object-fit: contain;
+	}
+}
+
+.nav-end {
+	height: 100%;
+	width: 15%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-end-logo {
+	width: 60%;
+	height: 100%;
+	margin: 0 20px 0 0;
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn {
+	border: 0;
+	background: none;
+	box-shadow: none;
+	border-radius: 0px;
+	transition: 0.1s;
+	margin: 0 5x 0 5px;
+
+	&:hover {
+		cursor: pointer;
+
+		i {
+			color: $color_2;
+		}
+	}
+}
+
+button {
+	i {
+		font-size: 1.5em;
+		color: $color_3;
+	}
+}
+
+.nav-dropdown {
+	display: none;
+	background-color: $background-color_2;
+	width: 200px;
+	position: absolute;
+	top: 50px;
+	left: 25%;
+	z-index: 2;
+}

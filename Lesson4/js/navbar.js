@@ -11,8 +11,10 @@ productsList.forEach((product) => {
         if (productLink.innerText === 'PRODUCTS') {
             console.log(`mouseover on ${productLink.innerText}`);
             const productDropdown = product.querySelector('.nav-dropdown');
-            productDropdown.classList.add('active');
+            productDropdown.classList.add('.nav-dropdown');
         }
     });
 });
+
+
 

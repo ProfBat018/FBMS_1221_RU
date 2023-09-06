@@ -1,0 +1,120 @@
+@import 'addons';
+
+
+.nav-main {
+	padding: 0 5% 0 5%;
+	background-color: $background-color_1;
+	display: flex;
+	height: 40px;
+	justify-content: flex-start;
+	align-items: center;
+}
+.nav-menu-btn {
+	display: block;
+	&:checked {
+		~ {
+			.nav-body {
+				display: flex;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: $background-color_1;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
+.nav-body {
+	margin: 0 5% 0 5%;
+	height: 100%;
+	width: 50%;
+	list-style-type: none;
+	display: none;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-evenly;
+	li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		text-align: center;
+		height: 100%;
+		transition: ease-in-out 0.3s;
+		&:hover {
+			a {
+				color: $color_2;
+			}
+		}
+	}
+	a {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		color: $color_1;
+		text-decoration: none;
+		transition: ease-in-out 0.1s;
+		margin: 0;
+		font-family: $font-family_1;
+		white-space: nowrap;
+	}
+}
+.nav-logo {
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+	width: 30%;
+	height: 100%;
+	&:hover {
+		cursor: pointer;
+	}
+	a {
+		display: flex;
+		align-items: center;
+	}
+	img {
+		height: 50%;
+		width: auto;
+		object-fit: contain;
+	}
+}
+.nav-end {
+	height: 100%;
+	width: 30%;
+	display: flex;
+	justify-content: flex-end;
+}
+.nav-end-logo {
+	width: 60%;
+	height: 100%;
+	margin: 0 20px 0 0;
+	display: flex;
+	align-items: center;
+	&:hover {
+		cursor: pointer;
+	}
+}
+.btn {
+	border: 0;
+	background: none;
+	box-shadow: none;
+	border-radius: 0px;
+	transition: 0.1s;
+	margin: 0 5px 0 5px;
+	&:hover {
+		cursor: pointer;
+		i {
+			color: $color_2;
+		}
+	}
+}
+button {
+	i {
+		font-size: 1em;
+		color: $color_3;
+	}
+}
