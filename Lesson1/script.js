@@ -37,7 +37,6 @@ console.log(a); // ReferenceError: a is not defined
 // }
 */
 
-
 function foo(a, b) {
     console.log(a);
     console.log(b);
