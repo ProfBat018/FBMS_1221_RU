@@ -48,4 +48,6 @@ searchBtn.addEventListener('click', async () => {
 
 
 
-
+document.querySelector(`#test`).addEventListener('click', () => {
+    console.log('click');
+});
