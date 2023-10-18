@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "MeoyeC7SL4LUPzXnBorqlWwsIJkLYbAlHYBN6CC3QSFs1SZqaYTOuyMQ8AawehozbTF8a9lADgyR6I3KQjU1dA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elvin\\OneDrive\\Desktop\\MVCWebServer\\WebServer\\WebServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elvin\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\elvin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
