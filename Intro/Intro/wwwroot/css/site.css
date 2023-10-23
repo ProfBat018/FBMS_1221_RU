@@ -16,3 +16,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.search-form {
+  width: 100%;
+}
+.form-group {
+  display: flex;
+  width: 100%;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+.form-group button {
+  flex: 0 0 auto;
+}

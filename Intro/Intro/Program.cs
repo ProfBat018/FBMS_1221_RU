@@ -3,6 +3,8 @@
 builder.Services.AddRazorPages(); // Добавляю своему строителю поддержку Razor Pages
 
 
+builder.Services.AddSession(); // Добавляю поддержку сессий
+
 // Доо этой строчки кода добавляются все настройки строителя
 var app = builder.Build(); // Создаю приложение
 
@@ -14,6 +16,7 @@ if (!app.Environment.IsDevelopment())
 
 // Все, что начинается с app.Use - это Middleware
 
+app.UseSession(); // Использую сессии
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

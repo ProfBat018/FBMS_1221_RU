@@ -1,10 +1,41 @@
 ﻿@page
-@model IndexModel
+@model IndexModel 
+
 @{
     ViewData["Title"] = "Home page";
+    ViewBag.Title = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<form class="search-form" method="post">
+    <div class="form-group">
+        <input name="movieName" type="text" placeholder="Enter movie name..."/>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+@if (Model.Movie.SearchResults != null)
+{
+        <div class="row">
+            @foreach (Results item in Model.Movie.SearchResults)
+            {
+                    <div class="col-lg-3">
+                        <partial name="Shared/_cardPartial" model="item"/>
+                    </div>
+            }
+        </div>
+
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        @for (int i = 1; i < (int)TempData["totalPages"]; i++)
+        {
+            <li class="page-item">
+                    <form method="post">
+                        <input name="pageBtn" asp-page-handler="Next" value="@i" class="page-link" type="submit"/>
+                    </form>
+            </li>
+        }
+    </ul>
+</nav>
+}

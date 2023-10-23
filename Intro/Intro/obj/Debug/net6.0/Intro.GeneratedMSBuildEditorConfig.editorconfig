@@ -16,16 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Work\FBMS_1221_RU\Intro\Intro
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Work/FBMS_1221_RU/Intro/Intro/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Work/FBMS_1221_RU/Intro/Intro/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Work/FBMS_1221_RU/Intro/Intro/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+[C:/Work/FBMS_1221_RU/Intro/Intro/Pages/Shared/_cardPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9jYXJkUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Work/FBMS_1221_RU/Intro/Intro/Pages/Shared/_ValidationScriptsPartial.cshtml]
