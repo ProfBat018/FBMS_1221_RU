@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MeoyeC7SL4LUPzXnBorqlWwsIJkLYbAlHYBN6CC3QSFs1SZqaYTOuyMQ8AawehozbTF8a9lADgyR6I3KQjU1dA==",
+  "dgSpecHash": "ZEYAgQ7fsSWkCbYRbg/T9XJ0SbOo5jdCew73gYYrMbabkisk2yZBYdy0lDTR8SxdPUVHP5SdqAx/f5M0XIxKGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elvin\\OneDrive\\Desktop\\MVCWebServer\\WebServer\\WebServer.csproj",
+  "projectFilePath": "C:\\Work\\FBMS_1221_RU\\MVCWebServer\\WebServer\\WebServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elvin\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\elvin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",

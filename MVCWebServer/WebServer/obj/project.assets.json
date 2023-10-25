@@ -151,11 +151,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elvin\\OneDrive\\Desktop\\MVCWebServer\\WebServer\\WebServer.csproj",
+      "projectUniqueName": "C:\\Work\\FBMS_1221_RU\\MVCWebServer\\WebServer\\WebServer.csproj",
       "projectName": "WebServer",
-      "projectPath": "C:\\Users\\elvin\\OneDrive\\Desktop\\MVCWebServer\\WebServer\\WebServer.csproj",
+      "projectPath": "C:\\Work\\FBMS_1221_RU\\MVCWebServer\\WebServer\\WebServer.csproj",
       "packagesPath": "C:\\Users\\elvin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elvin\\OneDrive\\Desktop\\MVCWebServer\\WebServer\\obj\\",
+      "outputPath": "C:\\Work\\FBMS_1221_RU\\MVCWebServer\\WebServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\elvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
