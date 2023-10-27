@@ -1,4 +1,6 @@
-﻿namespace PetsData.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PetsData.Models;
 
 
 public class Pet
