@@ -10,6 +10,9 @@ public class PetCategory
 {
     public int Id { get; set; }
     public string Name { get; set; }
-    public int AnimalTypeId { get; set; }
+
     public AnimalType AnimalType { get; set; }
+    public int AnimalTypeID { get; set; }
+
+    public ICollection<Pet> Pets { get; set; }
 }
