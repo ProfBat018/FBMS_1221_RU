@@ -21,17 +21,11 @@ public class PetDbContext : DbContext
     public DbSet<Specification> Specifications { get; set; }
 
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public PetDbContext(DbContextOptions options) : base(options)
     {
-        var config = new ConfigurationBuilder()
-            .AddUserSecrets<PetDbContext>()
-            .Build();
-
-        var connectionString = config["PetsData:DefaultConnection"];
-
-        optionsBuilder.UseSqlServer(connectionString);
-
+        
     }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -72,7 +66,6 @@ public class PetDbContext : DbContext
             {
                 e.Property(x => x.Name).IsRequired();
                 e.Property(x => x.Age).IsRequired();
-                e.Property(x => x.Price).IsRequired();
                 e.Property(x => x.Color).IsRequired();
             });
 
@@ -103,6 +96,11 @@ public class PetDbContext : DbContext
             .HasOne(x => x.ProductCategoryType)
             .WithMany(x => x.ProductCategories)
             .HasForeignKey(x => x.ProductCategoryTypeId);
+
+        productCategoryEntity
+            .HasOne(x => x.PetCategory)
+            .WithMany(x => x.ProductCategories)
+            .HasForeignKey(x => x.PetCategoryId);
 
         // -------------------------------------------------------
 

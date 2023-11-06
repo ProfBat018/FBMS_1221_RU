@@ -13,6 +13,9 @@ public class ProductCategory
     public ProductCategoryType ProductCategoryType { get; set; }
     public int ProductCategoryTypeId { get; set; }
 
+    public PetCategory PetCategory { get; set; }
+    public int PetCategoryId { get; set; }
+
     public ICollection<Product> Products { get; set; }
 
     public ICollection<ProductSpecification> ProductSpecifications { get; set; }
