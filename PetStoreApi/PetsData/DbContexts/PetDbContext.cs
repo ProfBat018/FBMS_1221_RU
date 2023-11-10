@@ -126,8 +126,5 @@ public class PetDbContext : DbContext
             .HasOne(x => x.ProductCategory)
             .WithMany(x => x.ProductSpecifications)
             .HasForeignKey(x => x.ProductCategoryId);
-
-
-
     }
 }

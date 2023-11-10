@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PetsData.DbContexts;
 
@@ -15,6 +16,7 @@ public class ProductsController : ControllerBase
     }
 
 
+    
     [HttpGet("api/products")]
     public async Task<IActionResult> GetProducts()
     {
@@ -24,6 +26,14 @@ public class ProductsController : ControllerBase
     }
 
 
+    [Authorize]
+    [HttpGet("api/products2")]
+    public async Task<IActionResult> GetProducts2()
+    {
+        var products = await _context.Products.ToListAsync();
+
+        return Ok(products);
+    }
 
 
 
