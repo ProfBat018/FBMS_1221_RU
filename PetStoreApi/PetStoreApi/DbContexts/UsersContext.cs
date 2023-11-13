@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PetStoreApi.DbContexts;
 
-class UsersContext : IdentityDbContext<IdentityUser>
+public class UsersContext : IdentityDbContext<IdentityUser>
 {
     public UsersContext(DbContextOptions<UsersContext> options) : base(options)
     {

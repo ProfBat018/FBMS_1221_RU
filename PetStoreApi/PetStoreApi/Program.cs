@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using PetsData.DbContexts;
 using PetStoreApi.DbContexts;
+using PetStoreApi.Services;
 using System.Diagnostics;
 using System.Text;
 
@@ -16,9 +18,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services.AddCors(ops =>
                     ops.AddPolicy("AllowAnyOrigins", builder => builder.AllowAnyOrigin()));
 
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddDbContext<PetDbContext>(options =>
 {
