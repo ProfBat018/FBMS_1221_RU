@@ -15,12 +15,11 @@ public class ProductsController : ControllerBase
         _context = context;
     }
 
-
     
     [HttpGet("api/products")]
     public async Task<IActionResult> GetProducts()
     {
-        var products = await _context.Products.ToListAsync();
+        var products = await _context.Products.Select(x => x.Name).ToListAsync();
 
         return Ok(products);
     }

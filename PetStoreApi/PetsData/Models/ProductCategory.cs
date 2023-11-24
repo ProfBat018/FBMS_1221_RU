@@ -18,5 +18,4 @@ public class ProductCategory
 
     public ICollection<Product> Products { get; set; }
 
-    public ICollection<ProductSpecification> ProductSpecifications { get; set; }
 }

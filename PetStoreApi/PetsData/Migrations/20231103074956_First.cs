@@ -36,18 +36,7 @@ namespace PetsData.Migrations
                     table.PrimaryKey("PK_ProductCategoryTypes", x => x.Id);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Specifications",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Specifications", x => x.Id);
-                });
+         
 
             migrationBuilder.CreateTable(
                 name: "PetCategories",
@@ -112,32 +101,7 @@ namespace PetsData.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "ProductSpecifications",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductCategoryId = table.Column<int>(type: "int", nullable: false),
-                    SpecificationId = table.Column<int>(type: "int", nullable: false),
-                    Value = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductSpecifications", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_ProductSpecifications_ProductCategories_ProductCategoryId",
-                        column: x => x.ProductCategoryId,
-                        principalTable: "ProductCategories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ProductSpecifications_Specifications_SpecificationId",
-                        column: x => x.SpecificationId,
-                        principalTable: "Specifications",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
+        
 
             migrationBuilder.CreateTable(
                 name: "Pets",
@@ -194,15 +158,6 @@ namespace PetsData.Migrations
                 table: "Products",
                 column: "ProductCategoryId");
 
-            migrationBuilder.CreateIndex(
-                name: "IX_ProductSpecifications_ProductCategoryId",
-                table: "ProductSpecifications",
-                column: "ProductCategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProductSpecifications_SpecificationId",
-                table: "ProductSpecifications",
-                column: "SpecificationId");
         }
 
         /// <inheritdoc />
@@ -211,8 +166,6 @@ namespace PetsData.Migrations
             migrationBuilder.DropTable(
                 name: "Pets");
 
-            migrationBuilder.DropTable(
-                name: "ProductSpecifications");
 
             migrationBuilder.DropTable(
                 name: "PetCategories");
@@ -220,8 +173,6 @@ namespace PetsData.Migrations
             migrationBuilder.DropTable(
                 name: "Products");
 
-            migrationBuilder.DropTable(
-                name: "Specifications");
 
             migrationBuilder.DropTable(
                 name: "AnimalTypes");

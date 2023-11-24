@@ -17,11 +17,9 @@ public class PetDbContext : DbContext
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductCategory> ProductCategories { get; set; }
     public DbSet<ProductCategoryType> ProductCategoryTypes { get; set; }
-    public DbSet<ProductSpecification> ProductSpecifications { get; set; }
-    public DbSet<Specification> Specifications { get; set; }
 
 
-    public PetDbContext(DbContextOptions options) : base(options)
+    public PetDbContext(DbContextOptions<PetDbContext> options) : base(options)
     {
         
     }
@@ -36,9 +34,6 @@ public class PetDbContext : DbContext
         var productCategoryEntity = modelBuilder.Entity<ProductCategory>();
         var productCategoryTypeEntity = modelBuilder.Entity<ProductCategoryType>();
 
-        var specificationEntity = modelBuilder.Entity<Specification>();
-        var productSpecificationEntity = modelBuilder.Entity<ProductSpecification>();
-        
 
         animalTypesEntity
             .HasKey(x => x.Id);
@@ -106,25 +101,6 @@ public class PetDbContext : DbContext
 
         productCategoryTypeEntity.HasKey(x => x.Id);
         productCategoryTypeEntity.Property(x => x.Name).IsRequired();
-
-        // -------------------------------------------------------
-
-        specificationEntity.HasKey(x => x.Id);
-        specificationEntity.Property(x => x.Name).IsRequired();
-
-        // -------------------------------------------------------
-
-        productSpecificationEntity.HasKey(x => x.Id);
-        productSpecificationEntity.Property(x => x.Value).IsRequired();
-
-        productSpecificationEntity
-            .HasOne(x => x.Specification)
-            .WithMany(x => x.ProductSpecifications)
-            .HasForeignKey(x => x.SpecificationId);
-
-        productSpecificationEntity
-            .HasOne(x => x.ProductCategory)
-            .WithMany(x => x.ProductSpecifications)
-            .HasForeignKey(x => x.ProductCategoryId);
+     
     }
 }

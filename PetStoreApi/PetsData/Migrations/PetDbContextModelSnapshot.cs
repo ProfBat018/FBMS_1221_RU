@@ -16,7 +16,7 @@ namespace PetsData.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.13")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -120,6 +120,10 @@ namespace PetsData.Migrations
                     b.Property<int>("ProductCategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Specifications")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductCategoryId");
@@ -169,50 +173,6 @@ namespace PetsData.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductCategoryTypes");
-                });
-
-            modelBuilder.Entity("PetsData.Models.ProductSpecification", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ProductCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SpecificationId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Value")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductCategoryId");
-
-                    b.HasIndex("SpecificationId");
-
-                    b.ToTable("ProductSpecifications");
-                });
-
-            modelBuilder.Entity("PetsData.Models.Specification", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Specifications");
                 });
 
             modelBuilder.Entity("PetsData.Models.Pet", b =>
@@ -275,25 +235,6 @@ namespace PetsData.Migrations
                     b.Navigation("ProductCategoryType");
                 });
 
-            modelBuilder.Entity("PetsData.Models.ProductSpecification", b =>
-                {
-                    b.HasOne("PetsData.Models.ProductCategory", "ProductCategory")
-                        .WithMany("ProductSpecifications")
-                        .HasForeignKey("ProductCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PetsData.Models.Specification", "Specification")
-                        .WithMany("ProductSpecifications")
-                        .HasForeignKey("SpecificationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ProductCategory");
-
-                    b.Navigation("Specification");
-                });
-
             modelBuilder.Entity("PetsData.Models.AnimalType", b =>
                 {
                     b.Navigation("PetCategories");
@@ -313,19 +254,12 @@ namespace PetsData.Migrations
 
             modelBuilder.Entity("PetsData.Models.ProductCategory", b =>
                 {
-                    b.Navigation("ProductSpecifications");
-
                     b.Navigation("Products");
                 });
 
             modelBuilder.Entity("PetsData.Models.ProductCategoryType", b =>
                 {
                     b.Navigation("ProductCategories");
-                });
-
-            modelBuilder.Entity("PetsData.Models.Specification", b =>
-                {
-                    b.Navigation("ProductSpecifications");
                 });
 #pragma warning restore 612, 618
         }

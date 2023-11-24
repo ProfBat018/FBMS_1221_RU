@@ -26,4 +26,31 @@ var claims = new List<Claim>
 
 Роль, в свою очередь, это просто `Claim`, который имеет тип `ClaimTypes.Role`. И по этому типу, вы можете проверить, есть ли у пользователя роль `Admin` или нет. 
 
+```csharp
+  private List<Claim> CreateClaims(IdentityUser user)
+    {
+        try
+        {
+            var claims = new List<Claim>
+                {
+                    new Claim(JwtRegisteredClaimNames.Sub, "TokenForTheApiWithAuth"),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                    new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString(CultureInfo.InvariantCulture)),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id),
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(ClaimTypes.Email, user.Email)
+                };
+            return claims;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+```
 
+## JwtRegisteredClaimNames
+`Sub` - это уникальный идентификатор пользователя.
+`Jti` - это уникальный идентификатор токена. По сути и есть сам токен
+`Iat` - это время создания токена
