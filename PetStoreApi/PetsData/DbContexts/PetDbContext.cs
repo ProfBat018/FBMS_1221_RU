@@ -13,7 +13,6 @@ public class PetDbContext : DbContext
     public DbSet<AnimalType> AnimalTypes { get; set; }
     public DbSet<Pet> Pets { get; set; }
     public DbSet<PetCategory> PetCategories { get; set; }
-
     public DbSet<Product> Products { get; set; }
     public DbSet<ProductCategory> ProductCategories { get; set; }
     public DbSet<ProductCategoryType> ProductCategoryTypes { get; set; }

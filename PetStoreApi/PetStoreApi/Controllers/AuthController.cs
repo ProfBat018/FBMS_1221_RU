@@ -16,9 +16,9 @@ public class AuthController : ControllerBase
 {
     private readonly UserManager<IdentityUser> _userManager;
     private readonly UsersContext _context;
-    private readonly ITokenService _tokenService;
+    private readonly ITokenManagerService _tokenService;
 
-    public AuthController(UserManager<IdentityUser> userManager, ITokenService tokenService, UsersContext context)
+    public AuthController(UserManager<IdentityUser> userManager, ITokenManagerService tokenService, UsersContext context)
     {
         _userManager = userManager;
         _tokenService = tokenService;
@@ -64,11 +64,15 @@ public class AuthController : ControllerBase
         {
             return BadRequest("Bad credentials");
         }
+
         var userInDb = _context.Users.FirstOrDefault(u => u.Email == request.Email);
         if (userInDb is null)
             return Unauthorized();
+
         var accessToken = _tokenService.CreateToken(userInDb);
+        
         await _context.SaveChangesAsync();
+        
         return Ok(new AuthResponse
         {
             Username = userInDb.UserName,

@@ -51,4 +51,11 @@
 ![](https://cdn.educba.com/academy/wp-content/uploads/2020/04/REST-vs-RESTfu-infol-1.jpg)
 
 
+# SOAP (Simple Object Access Protocol)
+
+Это протокол, который использует XML для передачи данных. SOAP использует HTTP протокол для передачи данных. SOAP использует WSDL (Web Services Description Language) для описания доступных методов веб-сервиса. SOAP использует UDDI (Universal Description, Discovery and Integration) для поиска доступных сервисов.
+
+В принципе это устаревший протокол, который используется в основном в старых проектах. Но все же стоит знать, что это такое.
+
+
 
