@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PetStoreApi.DbContexts;
-using PetStoreApi.Models;
+using PetStoreApi.Models.Identity;
 using PetStoreApi.Models.JWT;
-using PetStoreApi.Services;
+using PetStoreApi.Services.JWT.Interfaces;
 using System.Runtime.CompilerServices;
 
 namespace PetStoreApi.Controllers;
@@ -15,14 +15,16 @@ namespace PetStoreApi.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly UserManager<IdentityUser> _userManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
     private readonly UsersContext _context;
-    private readonly ITokenManagerService _tokenService;
+    private readonly ITokenCreationService _tokenService;
 
-    public AuthController(UserManager<IdentityUser> userManager, ITokenManagerService tokenService, UsersContext context)
+    public AuthController(UserManager<IdentityUser> userManager, ITokenCreationService tokenService, UsersContext context, RoleManager<IdentityRole> roleManager)
     {
         _userManager = userManager;
         _tokenService = tokenService;
         _context = context;
+        _roleManager = roleManager;
     }
 
     [Route("/Register")]
@@ -35,13 +37,32 @@ public class AuthController : ControllerBase
             Email = request.Email
         };
 
+        if (user.Email.Contains("petshop.org"))
+        {
+            var role = await _roleManager.FindByNameAsync(IdentityData.Admin);
+            if (role == null)
+            {
+                await _roleManager.CreateAsync(new IdentityRole(IdentityData.Admin));
+            }
+            await _userManager.AddToRoleAsync(user, IdentityData.Admin);
+        }
+        else
+        {
+            var role = await _roleManager.FindByNameAsync(IdentityData.User);
+            if (role == null)
+            {
+                await _roleManager.CreateAsync(new IdentityRole(IdentityData.User));
+            }
+            await _userManager.AddToRoleAsync(user, IdentityData.User);
+        }
+
+
         var result = await _userManager.CreateAsync(user, request.Password);
 
         if (!result.Succeeded)
         {
             return BadRequest(result.Errors);
         }
-
         return Ok();
     }
 
@@ -70,14 +91,9 @@ public class AuthController : ControllerBase
             return Unauthorized();
 
         var accessToken = _tokenService.CreateToken(userInDb);
-        
+
         await _context.SaveChangesAsync();
-        
-        return Ok(new AuthResponse
-        {
-            Username = userInDb.UserName,
-            Email = userInDb.Email,
-            Token = accessToken,
-        });
-    } 
+
+        return Ok(new { token = accessToken });
+    }
 }

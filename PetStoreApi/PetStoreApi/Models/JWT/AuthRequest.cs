@@ -1,4 +1,6 @@
-﻿namespace PetStoreApi.Models.JWT;
+﻿    using Microsoft.AspNetCore.Identity;
+
+    namespace PetStoreApi.Models.JWT;
 
 public class AuthRequest
 {
