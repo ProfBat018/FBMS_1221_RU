@@ -30,23 +30,22 @@ public class ProductsController : ControllerBase
 
 
 
-    [Authorize(Policy = IdentityData.Admin)]
+    [Authorize]
     [HttpGet("api/products2")]
     public async Task<IActionResult> GetProducts2()
     {
-        
         var products = await _context.Products.Select(x => x.Name).ToListAsync();
 
         return Ok(products);
     }
 
 
-    [Authorize(Policy = IdentityData.User)]
-    [HttpGet("api/products3")]
-    public async Task<IActionResult> GetProducts3()
-    {
-        var products = await _context.Products.Select(x => x.Name).ToListAsync();
+    //[Authorize(Policy = IdentityData.User)]
+    //[HttpGet("api/products3")]
+    //public async Task<IActionResult> GetProducts3()
+    //{
+    //    var products = await _context.Products.Select(x => x.Name).ToListAsync();
 
-        return Ok(products);
-    }
+    //    return Ok(products);
+    //}
 }

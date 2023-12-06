@@ -1,6 +1,8 @@
-﻿namespace PetStoreApi.Services.JWT.Interfaces;
+﻿using System.Security.Claims;
+
+namespace PetStoreApi.Services.JWT.Interfaces;
 
 public interface ITokenRefreshService
 {
-    public string RefreshToken(string token);
+    public string RefreshToken();
 }

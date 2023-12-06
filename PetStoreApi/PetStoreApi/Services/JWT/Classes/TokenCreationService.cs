@@ -22,7 +22,7 @@ namespace PetStoreApi.Services.JWT.Classes
             _configuration = configuration;
         }
 
-        public string CreateToken(IdentityUser user)
+        public AuthResponse CreateToken(IdentityUser user)
         {
             var claims = new[]
             {
@@ -38,12 +38,16 @@ namespace PetStoreApi.Services.JWT.Classes
                    issuer: _configuration["JwtSettings:Issuer"],
                    audience: _configuration["JwtSettings:Audience"],
                    claims: claims,
-                   expires: DateTime.Now.AddMinutes(ExpirationMinutes),
+                   expires: DateTime.UtcNow.AddMinutes(ExpirationMinutes),
                    signingCredentials: signingCredentials);
 
             string tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
-            return tokenString;
+            return new AuthResponse()
+            {
+                Token = tokenString,
+                ValidTo = token.ValidTo.ToLocalTime().ToString(CultureInfo.InvariantCulture)
+            };
         }
     }
 }

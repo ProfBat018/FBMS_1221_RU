@@ -7,6 +7,7 @@ using PetStoreApi.Models.Identity;
 using PetStoreApi.Models.JWT;
 using PetStoreApi.Services.JWT.Interfaces;
 using System.Runtime.CompilerServices;
+using System.Security.Claims;
 
 namespace PetStoreApi.Controllers;
 
@@ -14,29 +15,30 @@ namespace PetStoreApi.Controllers;
 [ApiController]
 public class AuthController : ControllerBase
 {
-    private readonly UserManager<IdentityUser> _userManager;
+    private readonly UserManager<ApplicationUser> _userManager;
     private readonly RoleManager<IdentityRole> _roleManager;
     private readonly UsersContext _context;
-    private readonly ITokenCreationService _tokenService;
+    private readonly ITokenManagerService _tokenManagerService;
 
-    public AuthController(UserManager<IdentityUser> userManager, ITokenCreationService tokenService, UsersContext context, RoleManager<IdentityRole> roleManager)
+    public AuthController(UserManager<ApplicationUser> userManager, UsersContext context, RoleManager<IdentityRole> roleManager, ITokenManagerService tokenManagerService)
     {
         _userManager = userManager;
-        _tokenService = tokenService;
         _context = context;
         _roleManager = roleManager;
+        _tokenManagerService = tokenManagerService;
     }
 
     [Route("/Register")]
     [HttpPost]
     public async Task<IActionResult> Register([FromBody] RegistrationRequest request)
     {
-        var user = new IdentityUser
+        var user = new ApplicationUser()
         {
             UserName = request.Username,
             Email = request.Email
         };
-
+        
+        
         if (user.Email.Contains("petshop.org"))
         {
             var role = await _roleManager.FindByNameAsync(IdentityData.Admin);
@@ -66,6 +68,7 @@ public class AuthController : ControllerBase
         return Ok();
     }
 
+
     [Route("/Login")]
     [HttpPost]
     public async Task<IActionResult> Login([FromBody] AuthRequest request)
@@ -76,11 +79,14 @@ public class AuthController : ControllerBase
         }
 
         var managedUser = await _userManager.FindByEmailAsync(request.Email);
+
         if (managedUser == null)
         {
             return BadRequest("Bad credentials");
         }
+
         var isPasswordValid = await _userManager.CheckPasswordAsync(managedUser, request.Password);
+        
         if (!isPasswordValid)
         {
             return BadRequest("Bad credentials");
@@ -90,10 +96,50 @@ public class AuthController : ControllerBase
         if (userInDb is null)
             return Unauthorized();
 
-        var accessToken = _tokenService.CreateToken(userInDb);
+        var auth = _tokenManagerService.CreateToken(userInDb);
 
-        await _context.SaveChangesAsync();
+        userInDb.RefreshToken = _tokenManagerService.RefreshToken();
 
-        return Ok(new { token = accessToken });
+        userInDb.RefreshTokenExpiryTime = DateTime.Now.AddDays(7);
+
+        auth.RefreshToken = userInDb.RefreshToken;
+
+        await _userManager.UpdateAsync(userInDb);
+
+        return Ok(auth);
+    }
+
+    [Route("/RefreshToken")]
+    [HttpPost]
+    public async Task<IActionResult> RefreshToken([FromBody] TokenModel request)
+    {
+        if (request is null)
+            return BadRequest("Invalid client request");
+
+        var principal = _tokenManagerService.GetPrincipalFromExpiredToken(request.Token);
+
+
+        if (principal == null)
+            return BadRequest("Invalid client request");
+            
+        var email = principal.Claims.First(x => x.Type == ClaimTypes.Email);
+
+        
+        var user = await _userManager.FindByEmailAsync(email.Value);
+
+        if (user == null || user.RefreshToken != request.RefreshToken || user.RefreshTokenExpiryTime <= DateTime.Now)
+        {
+            return BadRequest("Invalid access token or refresh token");
+        }
+
+        var response = _tokenManagerService.CreateToken(user);
+        response.RefreshToken = _tokenManagerService.RefreshToken();
+
+
+        user.RefreshToken = response.RefreshToken;
+        await _userManager.UpdateAsync(user);
+
+
+        return Ok(response);
     }
 }

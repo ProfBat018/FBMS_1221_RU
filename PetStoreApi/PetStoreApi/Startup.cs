@@ -9,7 +9,6 @@ using PetStoreApi.Services.JWT.Classes;
 using PetStoreApi.Services.JWT.Interfaces;
 using System.Text;
 using Microsoft.Extensions.Options;
-using PetStoreApi.Options;
 using Microsoft.AspNetCore.Authentication;
 using PetStoreApi.Models.Identity;
 
@@ -26,34 +25,6 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services
-            .AddAuthentication().AddJwtBearer();
-
-        services.AddOptions<JwtBearerOptions>();
-        services.ConfigureOptions<ConfigureJwtOptions>();
-
-        services.AddOptions<AuthenticationOptions>();
-        services.ConfigureOptions<AuthOptions>();
-
-        services.AddAuthorization(ops =>
-        {
-            ops.AddPolicy(IdentityData.Admin, policy => policy.RequireClaim(IdentityData.Admin, "true"));
-            ops.AddPolicy(IdentityData.User, policy => policy.RequireClaim(IdentityData.User, "true"));
-        });
-
-        services
-            .AddIdentity<IdentityUser, IdentityRole>(options =>
-            {
-                options.SignIn.RequireConfirmedAccount = false;
-                options.User.RequireUniqueEmail = true;
-                options.Password.RequireDigit = true;
-                options.Password.RequiredLength = 8;
-                options.Password.RequireNonAlphanumeric = true;
-                options.Password.RequireUppercase = true;
-                options.Password.RequireLowercase = true;
-            })
-            .AddEntityFrameworkStores<UsersContext>();
-
         services.AddControllers();
         services.AddSwaggerGen(ops =>
         {
@@ -69,26 +40,69 @@ public class Startup
 
             ops.AddSecurityRequirement(new OpenApiSecurityRequirement()
             {
-                 {
-                       new OpenApiSecurityScheme
-                         {
-                             Reference = new OpenApiReference
-                             {
-                                 Type = ReferenceType.SecurityScheme,
-                                 Id = "Bearer"
-                             }
-                         },
-                         new string[] {}
-                 }
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                    },
+                    new string[] {}
+                }
             });
         });
+        
+        services
+            .AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = _configuration["JwtSettings:Issuer"],
+                    ValidAudience = _configuration["JwtSettings:Issuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:Key"]))
+                };
+            });
 
+        
+        //services.ConfigureOptions<ConfigureJwtOptions>();
+        //services.ConfigureOptions<JwtOptionsSetup>();
+
+
+        services.AddAuthorization();
+
+        services
+            .AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = true;
+            })
+            .AddEntityFrameworkStores<UsersContext>();
+
+  
 
         services.AddCors(ops =>
                             ops.AddPolicy("AllowAnyOrigins", builder => builder.AllowAnyOrigin()));
 
 
         services.AddTransient<ITokenCreationService, TokenCreationService>();
+        services.AddTransient<ITokenRefreshService, TokenRefreshService>();
+        services.AddTransient<ITokenManagerService, TokenManagerService>();
 
         services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

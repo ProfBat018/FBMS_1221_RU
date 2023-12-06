@@ -5,5 +5,5 @@ namespace PetStoreApi.Services.JWT.Interfaces;
 
 public interface ITokenCreationService
 {
-    public string CreateToken(IdentityUser user);
+    public AuthResponse CreateToken(IdentityUser user);
 }
