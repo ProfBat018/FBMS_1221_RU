@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Primitives;
 using PetsData.DbContexts;
@@ -8,18 +9,20 @@ using PetStoreApi.Models.Identity;
 
 namespace PetStoreApi.Controllers;
 
+
+
+[Authorize]
 [ApiController]
 public class ProductsController : ControllerBase
 {
     private readonly PetDbContext _context;
-    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public ProductsController(PetDbContext context, IHttpContextAccessor httpContextAccessor)
+    public ProductsController(PetDbContext context)
     {
         _context = context;
-        _httpContextAccessor = httpContextAccessor;
     }
 
+    [AllowAnonymous]
     [HttpGet("api/products")]
     public async Task<IActionResult> GetProducts()
     {
@@ -29,8 +32,6 @@ public class ProductsController : ControllerBase
     }
 
 
-
-    [Authorize]
     [HttpGet("api/products2")]
     public async Task<IActionResult> GetProducts2()
     {
@@ -38,14 +39,4 @@ public class ProductsController : ControllerBase
 
         return Ok(products);
     }
-
-
-    //[Authorize(Policy = IdentityData.User)]
-    //[HttpGet("api/products3")]
-    //public async Task<IActionResult> GetProducts3()
-    //{
-    //    var products = await _context.Products.Select(x => x.Name).ToListAsync();
-
-    //    return Ok(products);
-    //}
 }

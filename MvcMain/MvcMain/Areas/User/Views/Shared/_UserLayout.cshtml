@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary" data-bs-theme="dark">
+        <a class="navbar-brand" href="#">
+            <img style="nav-logo-img" src="~/images/cga-logo.svg" alt="CGA Logo" class="d-inline-block align-text-top"/>
+        </a>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Əsas səhifə</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Çatdırılan avtomobillər</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kataloq</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Haqqımızda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="btn btn-outline-success" asp-area="Identity" asp-page="/Account/Login">
+                            Daxil Ol
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/a3d2e49c70.js" crossorigin="anonymous"></script>
+</body>
+</html>
