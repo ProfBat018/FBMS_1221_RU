@@ -1,0 +1,78 @@
+@page
+@model ProductsPageModel
+@{
+    const int lowPrice = 100;
+    const int highPrice = 1000;
+}
+
+<table class="table table-sm table-bordered mt-2">
+    <thead>
+        <tr>
+            <th scope="col">Legend</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">
+                Standard price
+            </th>
+        </tr>
+        <tr>
+            <th scope="row" class="table-info">
+                High price [> @($"{highPrice:C}")]
+            </th>
+        </tr>
+        <tr>
+            <th scope="row" class="table-warning">
+                Low price [< @($"{lowPrice:C}")]
+            </th>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">SKU</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach(Product item in Model.Products ?? Enumerable.Empty<Product>())
+        {
+            string rowHighlight = item.price switch
+            {
+                (> lowPrice) and (< highPrice) => String.Empty,
+                0 => "table-danger",
+                >= highPrice => "table-info",
+                <= lowPrice => "table-warning"
+            };
+            <tr class="@rowHighlight">
+                <th scope="row">
+                    @item.id
+                </th>
+                <td>
+                    @item.name
+                </td>
+                <td>
+                    @item.sku
+                </td>
+                <td>
+                    @item.categoryName
+                </td>
+                <td>
+                    <small>
+                        @item.description
+                    </small>
+                </td>
+                <td class="text-end">
+                    @($"{item.price:C}")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

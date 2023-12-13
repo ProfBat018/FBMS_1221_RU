@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml" />
+  <Default Extension="psmdcp" ContentType="application/vnd.openxmlformats-package.core-properties+xml" />
+  <Default Extension="cshtml" ContentType="application/octet" />
+  <Default Extension="sample" ContentType="application/octet" />
+  <Default Extension="exe" ContentType="application/octet" />
+  <Default Extension="txt" ContentType="application/octet" />
+  <Default Extension="json" ContentType="application/octet" />
+  <Default Extension="md" ContentType="application/octet" />
+  <Default Extension="pdb" ContentType="application/octet" />
+  <Default Extension="dll" ContentType="application/octet" />
+  <Default Extension="cs" ContentType="application/octet" />
+  <Default Extension="editorconfig" ContentType="application/octet" />
+  <Default Extension="cache" ContentType="application/octet" />
+  <Default Extension="csproj" ContentType="application/octet" />
+  <Default Extension="idx" ContentType="application/octet" />
+  <Default Extension="props" ContentType="application/octet" />
+  <Default Extension="pack" ContentType="application/octet" />
+  <Default Extension="targets" ContentType="application/octet" />
+  <Default Extension="ico" ContentType="application/octet" />
+  <Default Extension="png" ContentType="application/octet" />
+  <Default Extension="nuspec" ContentType="application/octet" />
+  <Override PartName="/.git/index" ContentType="application/octet" />
+  <Override PartName="/.git/packed-refs" ContentType="application/octet" />
+  <Override PartName="/.git/info/exclude" ContentType="application/octet" />
+  <Override PartName="/.git/logs/refs/heads/main" ContentType="application/octet" />
+  <Override PartName="/.git/logs/HEAD" ContentType="application/octet" />
+  <Override PartName="/.git/refs/remotes/origin/HEAD" ContentType="application/octet" />
+  <Override PartName="/.git/config" ContentType="application/octet" />
+  <Override PartName="/.git/refs/heads/main" ContentType="application/octet" />
+  <Override PartName="/.git/description" ContentType="application/octet" />
+  <Override PartName="/.git/FETCH_HEAD" ContentType="application/octet" />
+  <Override PartName="/.git/logs/refs/remotes/origin/HEAD" ContentType="application/octet" />
+  <Override PartName="/.git/HEAD" ContentType="application/octet" />
+</Types>

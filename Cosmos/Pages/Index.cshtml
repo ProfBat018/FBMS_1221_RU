@@ -1,0 +1,45 @@
+﻿@page
+@model IndexPageModel
+
+<header class="p-5 mb-5 bg-dark text-white rounded-bottom">
+    <div class="container-fluid">
+        <h4 class="display-4 fw-bold">
+            Active products
+        </h4>
+        <p class="fs-4">
+            Latest products found in NoSQL container.
+        </p>
+        <a class="btn btn-outline-light btn-lg" asp-page="/products">
+            View all products
+        </a>
+        <a class="btn btn-outline-light btn-lg" asp-page="/addproducts">
+           Push Active products
+        </a>
+    </div>
+</header>
+<div class="row" data-masonry='{"percentPosition": true }'>
+    @foreach(Product item in Model.Products ?? Enumerable.Empty<Product>())
+    {
+        <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+                <h6 class="card-header bg-primary text-white d-flex w-100 justify-content-between">
+                    @item.sku
+                    <span class="badge text-bg-light">
+                        @($"{item.price:C}")
+                    </span>
+                </h6>
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        @item.name
+                    </h5>
+                    <p class="card-text text-center">@item.description</p>
+                </div>
+                <h6 class="card-footer bg-secondary text-white text-center">
+                    <small>
+                        @item.categoryName
+                    </small>
+                </h6>
+            </div>
+        </div>
+    }
+</div>

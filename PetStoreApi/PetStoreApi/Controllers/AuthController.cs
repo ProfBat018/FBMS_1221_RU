@@ -37,26 +37,25 @@ public class AuthController : ControllerBase
             UserName = request.Username,
             Email = request.Email
         };
-        
-        
-        if (user.Email.Contains("petshop.org"))
-        {
-            var role = await _roleManager.FindByNameAsync(IdentityData.Admin);
-            if (role == null)
-            {
-                await _roleManager.CreateAsync(new IdentityRole(IdentityData.Admin));
-            }
-            await _userManager.AddToRoleAsync(user, IdentityData.Admin);
-        }
-        else
-        {
-            var role = await _roleManager.FindByNameAsync(IdentityData.User);
-            if (role == null)
-            {
-                await _roleManager.CreateAsync(new IdentityRole(IdentityData.User));
-            }
-            await _userManager.AddToRoleAsync(user, IdentityData.User);
-        }
+
+        //if (user.Email.Contains("petshop.org"))
+        //{
+        //    var role = await _roleManager.FindByNameAsync(IdentityData.Admin);
+        //    if (role == null)
+        //    {
+        //        await _roleManager.CreateAsync(new IdentityRole(IdentityData.Admin));
+        //    }
+        //    await _userManager.AddToRoleAsync(user, IdentityData.Admin);
+        //}
+        //else
+        //{
+        //    var role = await _roleManager.FindByNameAsync(IdentityData.User);
+        //    if (role == null)
+        //    {
+        //        await _roleManager.CreateAsync(new IdentityRole(IdentityData.User));
+        //    }
+        //    await _userManager.AddToRoleAsync(user, IdentityData.User);
+        //}
 
 
         var result = await _userManager.CreateAsync(user, request.Password);
@@ -65,6 +64,17 @@ public class AuthController : ControllerBase
         {
             return BadRequest(result.Errors);
         }
+
+        var tracker = _context.ChangeTracker.Entries<ApplicationUser>();
+
+        foreach (var entry in tracker)
+        {
+             var entity = entry.Entity;
+             var state = entry.State;
+            await Console.Out.WriteLineAsync(entity.Email);
+            await Console.Out.WriteLineAsync(state.ToString());
+        }
+
         return Ok();
     }
 

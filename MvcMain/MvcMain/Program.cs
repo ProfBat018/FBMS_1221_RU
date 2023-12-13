@@ -9,7 +9,7 @@ using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DeafultConnection") ?? throw new InvalidOperationException("Connection string 'UserDataContextConnection' not found.");
+var connectionString = builder.Configuration.GetConnectionString("UsersContextConnection") ?? throw new InvalidOperationException("Connection string 'UserDataContextConnection' not found.");
 
 builder.Services.AddLocalization(o => o.ResourcesPath = "Resources");
 
@@ -21,8 +21,8 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
     {
-        new CultureInfo("az-AZ"), 
-        new CultureInfo("ru-RU") 
+        new CultureInfo("az-AZ"),
+        new CultureInfo("ru-RU")
     };
 
     options.DefaultRequestCulture = new RequestCulture("az-AZ");
@@ -36,9 +36,15 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 
 builder.Services.AddDbContext<UsersContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<UsersContext>();
 
-builder.Services.AddAuthentication();
+builder.Services.AddAuthentication()
+    .AddGoogle(googleOptions =>
+        {
+            googleOptions.ClientId = builder.Configuration["GoogleAuth:ClientId"];
+            googleOptions.ClientSecret = builder.Configuration["GoogleAuth:ClientSecret"];
+        });
+
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<UsersContext>();
 builder.Services.AddAuthorization();
 
 
