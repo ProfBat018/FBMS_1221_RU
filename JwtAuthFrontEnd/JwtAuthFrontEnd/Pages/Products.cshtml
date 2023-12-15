@@ -1,0 +1,22 @@
+﻿@page
+@model JwtAuthFrontEnd.Pages.ProductsModel
+@{
+}
+
+
+<form method="post">
+    <button type="submit" class="btn btn-primary btn-block mb-4">Get Products</button>
+</form>
+
+<div>
+    @if (Model.Products != null)
+    {
+        <p>@Model.Products</p>
+    @foreach (var product in Model.Products)
+    {
+        <div>
+            <p>@product</p>
+        </div>
+    }
+    }
+</div>

@@ -9,6 +9,7 @@ using PetStoreApi.Services.JWT.Classes;
 using PetStoreApi.Services.JWT.Interfaces;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -78,7 +79,6 @@ builder.Services
 
 
 builder.Services.AddAuthorization();
-
 builder.Services.AddCors(ops =>
                     ops.AddPolicy("AllowAnyOrigins", builder => builder.AllowAnyOrigin()));
 
@@ -95,6 +95,23 @@ builder.Services.AddDbContext<UsersContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionRemote"));
 });
+
+
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .WriteTo.MSSqlServer(
+        connectionString: builder.Configuration.GetConnectionString("DefaultConnectionRemote"),
+        sinkOptions: new Serilog.Sinks.MSSqlServer.MSSqlServerSinkOptions
+        {
+            TableName = "Logs",
+            AutoCreateSqlTable = true
+        }
+    )
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+//builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 
 
 var app = builder.Build();

@@ -1,0 +1,191 @@
+2023-12-15 11:30:57.395 +04:00 [INF] User profile is available. Using 'C:\Users\elvin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-15 11:30:57.507 +04:00 [INF] Now listening on: https://localhost:7108
+2023-12-15 11:30:57.508 +04:00 [INF] Now listening on: http://localhost:5020
+2023-12-15 11:30:57.510 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-15 11:30:57.510 +04:00 [INF] Hosting environment: Development
+2023-12-15 11:30:57.511 +04:00 [INF] Content root path: C:\Work\FBMS_1221_RU\PetStoreApi\PetStoreApi
+2023-12-15 11:30:58.042 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/index.html - null null
+2023-12-15 11:30:58.160 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/index.html - 200 null text/html;charset=utf-8 118.7362ms
+2023-12-15 11:30:58.181 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-15 11:30:58.184 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 2.6051ms
+2023-12-15 11:30:58.184 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_vs/browserLink - null null
+2023-12-15 11:30:58.203 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.263ms
+2023-12-15 11:30:58.294 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - null null
+2023-12-15 11:30:58.366 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 71.6914ms
+2023-12-15 11:31:20.154 +04:00 [INF] Application is shutting down...
+2023-12-15 11:31:22.262 +04:00 [INF] User profile is available. Using 'C:\Users\elvin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-15 11:31:22.378 +04:00 [INF] Now listening on: https://localhost:7108
+2023-12-15 11:31:22.378 +04:00 [INF] Now listening on: http://localhost:5020
+2023-12-15 11:31:22.381 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-15 11:31:22.381 +04:00 [INF] Hosting environment: Development
+2023-12-15 11:31:22.381 +04:00 [INF] Content root path: C:\Work\FBMS_1221_RU\PetStoreApi\PetStoreApi
+2023-12-15 11:31:22.694 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/index.html - null null
+2023-12-15 11:31:22.816 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/index.html - 200 null text/html;charset=utf-8 123.0514ms
+2023-12-15 11:31:22.827 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_vs/browserLink - null null
+2023-12-15 11:31:22.827 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-15 11:31:22.829 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 2.664ms
+2023-12-15 11:31:22.849 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.6991ms
+2023-12-15 11:31:22.925 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - null null
+2023-12-15 11:31:23.011 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.0007ms
+2023-12-15 11:31:51.284 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7108/Login - application/json 64
+2023-12-15 11:31:51.287 +04:00 [INF] CORS policy execution successful.
+2023-12-15 11:31:51.318 +04:00 [INF] Executing endpoint 'PetStoreApi.Controllers.AuthController.Login (PetStoreApi)'
+2023-12-15 11:31:51.334 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(PetStoreApi.Models.JWT.AuthRequest) on controller PetStoreApi.Controllers.AuthController (PetStoreApi).
+2023-12-15 11:31:53.367 +04:00 [INF] Executed DbCommand (234ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-15 11:31:53.606 +04:00 [INF] Executed DbCommand (232ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-12-15 11:31:54.131 +04:00 [INF] Executed DbCommand (250ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-15 11:31:54.513 +04:00 [INF] Executed DbCommand (238ms) [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__request_Email_0
+2023-12-15 11:31:54.529 +04:00 [INF] profbat018
+2023-12-15 11:31:54.763 +04:00 [INF] Executed DbCommand (227ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-12-15 11:31:54.990 +04:00 [INF] Executed DbCommand (222ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-15 11:31:55.284 +04:00 [INF] Executed DbCommand (226ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2023-12-15 11:31:55.297 +04:00 [INF] Executing OkObjectResult, writing value of type 'PetStoreApi.Models.JWT.AuthResponse'.
+2023-12-15 11:31:55.302 +04:00 [INF] Executed action PetStoreApi.Controllers.AuthController.Login (PetStoreApi) in 3964.9506ms
+2023-12-15 11:31:55.303 +04:00 [INF] Executed endpoint 'PetStoreApi.Controllers.AuthController.Login (PetStoreApi)'
+2023-12-15 11:31:55.308 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7108/Login - 200 null application/json; charset=utf-8 4023.5548ms
+2023-12-15 11:32:37.747 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7108/Login - application/json 64
+2023-12-15 11:32:37.748 +04:00 [INF] CORS policy execution successful.
+2023-12-15 11:32:37.749 +04:00 [INF] Executing endpoint 'PetStoreApi.Controllers.AuthController.Login (PetStoreApi)'
+2023-12-15 11:32:37.749 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(PetStoreApi.Models.JWT.AuthRequest) on controller PetStoreApi.Controllers.AuthController (PetStoreApi).
+2023-12-15 11:32:38.069 +04:00 [INF] Executed DbCommand (305ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-15 11:32:38.297 +04:00 [INF] Executed DbCommand (228ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-12-15 11:32:38.531 +04:00 [INF] Executed DbCommand (230ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-15 11:32:38.846 +04:00 [INF] Executed DbCommand (245ms) [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__request_Email_0
+2023-12-15 11:32:38.846 +04:00 [INF] profbat018
+2023-12-15 11:32:39.079 +04:00 [INF] Executed DbCommand (232ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-12-15 11:32:39.303 +04:00 [INF] Executed DbCommand (223ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-15 11:32:39.540 +04:00 [INF] Executed DbCommand (236ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2023-12-15 11:32:39.541 +04:00 [INF] Executing OkObjectResult, writing value of type 'PetStoreApi.Models.JWT.AuthResponse'.
+2023-12-15 11:32:39.542 +04:00 [INF] Executed action PetStoreApi.Controllers.AuthController.Login (PetStoreApi) in 1792.5386ms
+2023-12-15 11:32:39.542 +04:00 [INF] Executed endpoint 'PetStoreApi.Controllers.AuthController.Login (PetStoreApi)'
+2023-12-15 11:32:39.542 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7108/Login - 200 null application/json; charset=utf-8 1795.4581ms
+2023-12-15 11:37:29.088 +04:00 [INF] User profile is available. Using 'C:\Users\elvin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-15 11:37:29.205 +04:00 [INF] Now listening on: https://localhost:7108
+2023-12-15 11:37:29.205 +04:00 [INF] Now listening on: http://localhost:5020
+2023-12-15 11:37:29.207 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-15 11:37:29.208 +04:00 [INF] Hosting environment: Development
+2023-12-15 11:37:29.208 +04:00 [INF] Content root path: C:\Work\FBMS_1221_RU\PetStoreApi\PetStoreApi
+2023-12-15 11:37:29.447 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/index.html - null null
+2023-12-15 11:37:29.554 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/index.html - 200 null text/html;charset=utf-8 108.5711ms
+2023-12-15 11:37:29.577 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-15 11:37:29.579 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_framework/aspnetcore-browser-refresh.js - 200 13758 application/javascript; charset=utf-8 2.2145ms
+2023-12-15 11:37:29.581 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/_vs/browserLink - null null
+2023-12-15 11:37:29.600 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.0685ms
+2023-12-15 11:37:29.696 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - null null
+2023-12-15 11:37:29.752 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7108/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 55.4716ms
+2023-12-15 11:37:44.121 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7108/Login - application/json 64
+2023-12-15 11:37:44.125 +04:00 [INF] CORS policy execution successful.
+2023-12-15 11:37:44.160 +04:00 [INF] Executing endpoint 'PetStoreApi.Controllers.AuthController.Login (PetStoreApi)'
+2023-12-15 11:37:44.176 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(PetStoreApi.Models.JWT.AuthRequest) on controller PetStoreApi.Controllers.AuthController (PetStoreApi).
+2023-12-15 11:37:45.865 +04:00 [INF] Executed DbCommand (228ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-15 11:37:46.104 +04:00 [INF] Executed DbCommand (235ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-12-15 11:37:46.594 +04:00 [INF] Executed DbCommand (242ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-15 11:37:46.974 +04:00 [INF] Executed DbCommand (227ms) [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Email] = @__request_Email_0
+2023-12-15 11:37:46.990 +04:00 [INF] profbat018
+2023-12-15 11:37:47.227 +04:00 [INF] Executed DbCommand (228ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-12-15 11:37:47.462 +04:00 [INF] Executed DbCommand (230ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-12-15 11:37:47.767 +04:00 [INF] Executed DbCommand (234ms) [Parameters=[@p16='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p17='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [RefreshToken] = @p11, [RefreshTokenExpiryTime] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2023-12-15 11:37:47.779 +04:00 [INF] Executing OkObjectResult, writing value of type 'PetStoreApi.Models.JWT.AuthResponse'.
+2023-12-15 11:37:47.784 +04:00 [INF] Executed action PetStoreApi.Controllers.AuthController.Login (PetStoreApi) in 3604.6378ms
+2023-12-15 11:37:47.784 +04:00 [INF] Executed endpoint 'PetStoreApi.Controllers.AuthController.Login (PetStoreApi)'
+2023-12-15 11:37:47.790 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7108/Login - 200 null application/json; charset=utf-8 3668.9883ms
+2023-12-15 11:41:59.040 +04:00 [INF] Application is shutting down...

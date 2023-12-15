@@ -32,3 +32,4 @@ var changeTracker = context.ChangeTracker;
 ### ChangeTracker.Entries()
 `ChangeTracker.Entries()` - это метод, который возвращает коллекцию всех сущностей, которые были загружены или сохранены в базу данных.
 
+

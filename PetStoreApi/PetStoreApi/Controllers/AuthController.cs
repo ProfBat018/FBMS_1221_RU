@@ -6,6 +6,7 @@ using PetStoreApi.DbContexts;
 using PetStoreApi.Models.Identity;
 using PetStoreApi.Models.JWT;
 using PetStoreApi.Services.JWT.Interfaces;
+using Serilog;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
 
@@ -19,13 +20,15 @@ public class AuthController : ControllerBase
     private readonly RoleManager<IdentityRole> _roleManager;
     private readonly UsersContext _context;
     private readonly ITokenManagerService _tokenManagerService;
+    private readonly ILogger<AuthController> _logger;
 
-    public AuthController(UserManager<ApplicationUser> userManager, UsersContext context, RoleManager<IdentityRole> roleManager, ITokenManagerService tokenManagerService)
+    public AuthController(UserManager<ApplicationUser> userManager, UsersContext context, RoleManager<IdentityRole> roleManager, ITokenManagerService tokenManagerService, ILogger<AuthController> logger)
     {
         _userManager = userManager;
         _context = context;
         _roleManager = roleManager;
         _tokenManagerService = tokenManagerService;
+        _logger = logger;
     }
 
     [Route("/Register")]
@@ -37,6 +40,10 @@ public class AuthController : ControllerBase
             UserName = request.Username,
             Email = request.Email
         };
+
+        
+
+
 
         //if (user.Email.Contains("petshop.org"))
         //{
@@ -111,6 +118,9 @@ public class AuthController : ControllerBase
         userInDb.RefreshToken = _tokenManagerService.RefreshToken();
 
         userInDb.RefreshTokenExpiryTime = DateTime.Now.AddDays(7);
+
+        _logger.Log(LogLevel.Information, $"{userInDb.UserName}");
+
 
         auth.RefreshToken = userInDb.RefreshToken;
 
