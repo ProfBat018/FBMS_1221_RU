@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PetsData.Models;
 
-public class ProductCategoryType
+public class ProductCategoryType 
 {
     public int Id { get; set; }
     public string Name { get; set; }

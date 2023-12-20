@@ -30,7 +30,7 @@ public class ProductsController : ControllerBase
 
         return Ok(products);
     }
-
+    
 
     [HttpGet("api/products2")]
     public async Task<IActionResult> GetProducts2()

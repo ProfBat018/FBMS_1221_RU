@@ -10,6 +10,7 @@ using PetStoreApi.Services.JWT.Interfaces;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -63,7 +64,8 @@ builder.Services
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-    }).AddJwtBearer(options =>
+    })
+    .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new()
         {
@@ -86,6 +88,12 @@ builder.Services.AddCors(ops =>
 builder.Services.AddTransient<ITokenCreationService, TokenCreationService>();
 builder.Services.AddTransient<ITokenRefreshService, TokenRefreshService>();
 builder.Services.AddTransient<ITokenManagerService, TokenManagerService>();
+
+builder.Services.AddStackExchangeRedisCache(ops =>
+{
+    ops.Configuration = builder.Configuration.GetConnectionString("Redis");
+    ops.InstanceName = "PetStoreApi";
+});
 
 builder.Services.AddDbContext<PetDbContext>(options =>
 {
@@ -114,6 +122,7 @@ var logger = new LoggerConfiguration()
 builder.Logging.AddSerilog(logger);
 
 
+builder.Services.AddMediatR(ops => ops.RegisterServicesFromAssembly(typeof(Program).Assembly));
 var app = builder.Build();
 
 app.UseSwagger();
