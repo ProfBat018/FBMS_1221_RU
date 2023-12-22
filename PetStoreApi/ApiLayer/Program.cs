@@ -11,6 +11,10 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Microsoft.Extensions.DependencyInjection;
+using ApplicationLayer.Queries;
+using ApplicationLayer;
+using ApplicationLayer.Storages.Classes.Abstractions;
+using ApplicationLayer.Storages.Classes.Repos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -121,8 +125,13 @@ var logger = new LoggerConfiguration()
 //builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
+builder.Services.AddScoped<AnimalTypeRepository>();
+builder.Services.AddScoped<ProductRepository>();
 
-builder.Services.AddMediatR(ops => ops.RegisterServicesFromAssembly(typeof(Program).Assembly));
+builder.Services.AddMediatR(configuration => configuration
+        .RegisterServicesFromAssembly(AssemblyReference.Assembly));
+
+
 var app = builder.Build();
 
 app.UseSwagger();

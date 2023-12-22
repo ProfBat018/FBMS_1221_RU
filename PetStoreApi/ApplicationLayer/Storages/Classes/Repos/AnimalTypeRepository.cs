@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationLayer.Storages.Classes.Repos;
 
-public class AnimalTypeRepository : Repository<Product>
+public class AnimalTypeRepository : Repository<AnimalType>
 {
     private readonly PetDbContext _context;
 

@@ -10,6 +10,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="MediatR" Version="12.2.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjectionFixed" Version="5.1.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -33,6 +34,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\ApplicationLayer\ApplicationLayer.csproj" />
+		<ProjectReference Include="..\DataLayer\DataLayer.csproj" />
 		<ProjectReference Include="..\PetsData\DataLayer.csproj" />
 	</ItemGroup>
 

@@ -12,6 +12,7 @@ namespace ApplicationLayer.Handlers;
 
 public class GetAnimalTypesQueryHandler : IRequestHandler<GetAnimalTypesQuery, IEnumerable<AnimalType>>
 {
+
     private readonly AnimalTypeRepository _animalTypeRepository;
 
     public GetAnimalTypesQueryHandler(AnimalTypeRepository animalTypeRepository)
@@ -19,11 +20,10 @@ public class GetAnimalTypesQueryHandler : IRequestHandler<GetAnimalTypesQuery, I
         _animalTypeRepository = animalTypeRepository;
     }
 
-    public async Task<IEnumerable<Product>> Handle(GetAnimalTypesQuery request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<AnimalType>> Handle(GetAnimalTypesQuery request, CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();
 
         return await _animalTypeRepository.GetAllAsync();
     }
-
 }

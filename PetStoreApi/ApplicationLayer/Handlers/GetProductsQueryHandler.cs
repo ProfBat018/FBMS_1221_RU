@@ -23,6 +23,6 @@ public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, IEnumer
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await _productRepository.GetAllAsync();
+        return await _productRepository.GetAllAsync(x => x.Name);
     }
 }
