@@ -29,6 +29,16 @@ public class Repository<T> : IRepository<T> where T : class
         _dbSet.Add(entity);
     }
 
+    public async Task<IAsyncEnumerable<T>> SelectDbSetAsync(Expression<Func<T, object>> expression)
+    {
+        var param = Expression.Parameter(typeof(T));
+        var lambda = Expression.Lambda<Func<T, Object>>(expression, param);
+
+        var result =  _dbSet.Select(lambda).AsAsyncEnumerable();
+
+        return result as IAsyncEnumerable<T>;
+    }
+
     public async Task<T> FindByIdAsync(int id)
     {
         return await _dbSet.FindAsync(id);
@@ -51,6 +61,8 @@ public class Repository<T> : IRepository<T> where T : class
         }
         return await query.ToListAsync();
     }
+    
+    
 
     public async Task<T> GetFirstOrDefaultAsync(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = true)
     {

@@ -9,6 +9,30 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ApplicationLayer.Handlers;
+//
+// public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, IEnumerable<Product>>
+// {
+//     private readonly ProductRepository _productRepository;
+//
+//     public GetProductsQueryHandler(ProductRepository productRepository)
+//     {
+//         _productRepository = productRepository;
+//     }
+//
+//     public async Task<IEnumerable<Product>> Handle(GetProductsQuery request, CancellationToken cancellationToken)
+//     {
+//         cancellationToken.ThrowIfCancellationRequested();
+//
+//         // return await _productRepository.SelectDbSetAsync(x => x.Name);
+//
+//         var res = await _productRepository.SelectDbSetAsync(
+//             x => x.Name);
+//
+//         
+//         }
+//     }
+// }
+
 
 public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, IEnumerable<Product>>
 {
@@ -23,6 +47,6 @@ public class GetProductsQueryHandler : IRequestHandler<GetProductsQuery, IEnumer
     {
         cancellationToken.ThrowIfCancellationRequested();
 
-        return await _productRepository.GetAllAsync(x => x.Name);
+        return await _productRepository.GetAllAsync();
     }
 }

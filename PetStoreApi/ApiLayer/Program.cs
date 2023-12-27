@@ -8,6 +8,7 @@ using PetStoreApi.Models.Identity;
 using PetStoreApi.Services.JWT.Classes;
 using PetStoreApi.Services.JWT.Interfaces;
 using System.Text;
+using ApiLayer.Services.Redis.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +16,7 @@ using ApplicationLayer.Queries;
 using ApplicationLayer;
 using ApplicationLayer.Storages.Classes.Abstractions;
 using ApplicationLayer.Storages.Classes.Repos;
+using PetStoreApi.Services.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -88,6 +90,12 @@ builder.Services.AddAuthorization();
 builder.Services.AddCors(ops =>
                     ops.AddPolicy("AllowAnyOrigins", builder => builder.AllowAnyOrigin()));
 
+builder.Services.AddStackExchangeRedisCache(ops =>
+{
+    ops.Configuration = builder.Configuration.GetConnectionString("Redis");
+});
+
+builder.Services.AddSingleton<ICacheService, CacheService>();
 
 builder.Services.AddTransient<ITokenCreationService, TokenCreationService>();
 builder.Services.AddTransient<ITokenRefreshService, TokenRefreshService>();
@@ -96,7 +104,6 @@ builder.Services.AddTransient<ITokenManagerService, TokenManagerService>();
 builder.Services.AddStackExchangeRedisCache(ops =>
 {
     ops.Configuration = builder.Configuration.GetConnectionString("Redis");
-    ops.InstanceName = "PetStoreApi";
 });
 
 builder.Services.AddDbContext<PetDbContext>(options =>
