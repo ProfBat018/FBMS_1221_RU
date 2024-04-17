@@ -1,0 +1,27 @@
+{
+  'metadataSchema': {
+    'fields': [
+      {
+        'name': 'cameraId',
+        'searchable': false,
+        'filterable': true,
+        'type': 'string'
+      },
+      {
+        'name': 'timestamp',
+        'searchable': false,
+        'filterable': true,
+        'type': 'datetime'
+      }
+    ]
+  },
+  'features': [
+    {
+      'name': 'vision',
+      'domain': 'surveillance'
+    },
+    {
+      'name': 'speech'
+    }
+  ]
+}
