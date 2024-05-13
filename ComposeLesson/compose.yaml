@@ -1,0 +1,43 @@
+version: "3.8"
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  webapi:
+    platform: linux/arm64
+    build:
+      context: ./Back
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    networks:
+      - default
+    depends_on:
+      - database
+
+  database:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      SA_PASSWORD: "Elvin123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - default
+    volumes:
+      - dbdata:/var/opt/mssql
+
+  frontend:
+    build:
+      context: ./Front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+
+volumes:
+  dbdata:

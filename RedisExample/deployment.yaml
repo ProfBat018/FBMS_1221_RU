@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-example
+  template:
+    metadata:
+      labels:
+        app: redis-example
+    spec:
+      containers:
+        - name: redis
+          image: redis:latest
+          ports:
+            - containerPort: 6379
+        - name: web-api
+          image: profbat018/redisexample:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: "ASPNETCORE_ENVIRONMENT"
+              value: "Kubernetes"
+          volumeMounts:
+            - name: secrets
+              mountPath: /app/secrets
+              readOnly: true
+        - name: ms-sql-server
+          image: mcr.microsoft.com/mssql/server:2019-latest
+          ports:
+            - containerPort: 1433
+          env:
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: SA_PASSWORD
+              value: "Elvin123"
+      volumes:
+        - name: secrets
+          secret:
+            secretName: secret-appsettings

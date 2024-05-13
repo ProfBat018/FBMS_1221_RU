@@ -1,0 +1,48 @@
+﻿version: "3.8"
+
+volumes:
+  redisexample_secrets:
+  
+secrets:
+  myapi_secrets:
+    external: true
+    
+networks:
+    redisexample:
+        driver: bridge
+services:
+  database:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      SA_PASSWORD: "Elvin123"
+      ACCEPT_EULA: "Y"
+    networks:
+      - redisexample
+    ports:
+      - "1433:1433"
+  redisexample:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - USER_SECRETS_ID=836b9b8b-fd89-4aff-9286-809bda60998f
+    build:
+      context: .
+      dockerfile: RedisExample/Dockerfile
+    secrets:
+      - myapi_secrets
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - redisexample_secrets:/root/.dotnet/usersecrets
+    networks:
+      - redisexample
+    depends_on:
+      - redis
+      - database
+  redis: 
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - redisexample
+

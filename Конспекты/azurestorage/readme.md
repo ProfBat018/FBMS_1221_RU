@@ -1,7 +1,0 @@
-# Azure storage account 
-
-
-
-
-
-
